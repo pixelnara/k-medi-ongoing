@@ -107,6 +107,9 @@ ul {
 .eyebrow--center {
   text-align: center;
 }
+.c-caption {
+  color: var(--caption);
+}
 
 /* Display titles */
 .display {
@@ -913,7 +916,7 @@ ul {
 }
 .feature__title {
   font-family: var(--serif);
-  color: var(--caption);
+  color: var(--heading2);
   font-size: clamp(40px, 4vw, 72px);
   font-weight: 600;
   line-height: 1.05;
