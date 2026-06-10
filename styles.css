@@ -18,8 +18,10 @@
   --heading2: #222222;
   --heading3: #333333;
   --heading4: #444444;
+
   --body1: #222222;
   --body2: #6a6a6a;
+
   --caption: #7c4d56;
   --button: #111111;
   --button-hover: #653d45;
@@ -1505,8 +1507,8 @@ ul {
 }
 .acc-body__inner {
   padding: 0 30px 28px;
-  color: var(--body2);
-  font-size: 15.5px;
+  color: var(--body1);
+  font-size: 18px;
   line-height: 1.9;
   /* max-width: 64ch; */
   width: 100%;
