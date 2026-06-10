@@ -15,7 +15,7 @@
   --bg3: #0c506b;
   --surface: #f6f3f0;
   --heading: #111111;
-  --heading2: #222222;
+  --heading2: #212121;
   --heading3: #333333;
   --heading4: #444444;
 
@@ -1546,7 +1546,7 @@ ul {
 .hiw-card__step {
   font-family: var(--serif);
   color: var(--heading2);
-  font-size: 26px;
+  font-size: 30px;
   font-weight: 800;
   letter-spacing: -0.01em;
   margin-bottom: 18px;
