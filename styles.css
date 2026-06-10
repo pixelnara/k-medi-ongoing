@@ -994,7 +994,7 @@ ul {
   width: 100%;
 }
 .compare__col {
-  background: var(--surface);
+  background: var(--white);
   padding: clamp(30px, 3vw, 46px);
 }
 .compare__col--ours {
