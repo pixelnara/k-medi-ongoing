@@ -1544,8 +1544,8 @@ ul {
   padding: 0 30px var(--space-7);
   color: var(--text-heading);
   font-size: var(--text-18);
+  letter-spacing: var(--tracking-tight);
   line-height: 1.9;
-  /* max-width: 64ch; */
   width: 100%;
 }
 
@@ -1827,6 +1827,7 @@ ul {
   .acc-head {
     font-size: var(--text-lg);
     padding: var(--space-5) var(--space-5);
+    letter-spacing: var(--tracking-tight);
   }
   .acc-body__inner {
     padding: 0 var(--space-5) 22px;
