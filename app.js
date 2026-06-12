@@ -30,13 +30,13 @@
 
   /* ---------- Hero slider ---------- */
   const slides = [...document.querySelectorAll(".hero__slide")];
-  const dots = [...document.querySelectorAll(".hero__dots button")];
+  const counterCur = document.querySelector(".hero__counter-cur");
   let cur = 0;
   let timer = null;
   function go(i) {
     cur = (i + slides.length) % slides.length;
     slides.forEach((s, k) => s.classList.toggle("is-active", k === cur));
-    dots.forEach((d, k) => d.classList.toggle("is-active", k === cur));
+    if (counterCur) counterCur.textContent = cur + 1;
   }
   function play() {
     stop();
@@ -45,12 +45,6 @@
   function stop() {
     if (timer) clearInterval(timer);
   }
-  dots.forEach((d, k) =>
-    d.addEventListener("click", () => {
-      go(k);
-      play();
-    }),
-  );
   if (slides.length) {
     go(0);
     play();
