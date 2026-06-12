@@ -2168,7 +2168,7 @@ ul {
   .header__tagline {
     display: block;
     font-size: var(--text-18);
-    font-weight: 600;
+    font-weight: 700;
     letter-spacing: var(--tracking-tight);
     text-transform: uppercase;
     color: inherit;
@@ -2188,7 +2188,7 @@ ul {
   .hero__inner {
     justify-content: flex-end;
     padding-top: 0;
-    padding-bottom: calc(76px + var(--space-14));
+    padding-bottom: calc(76px + var(--space-2));
     align-items: center;
     text-align: center;
   }
@@ -2229,7 +2229,7 @@ ul {
     font-weight: 500;
     letter-spacing: 0.08em;
     padding: 0;
-    margin-top: var(--space-4);
+    margin-top: var(--space-1);
     gap: var(--space-2);
   }
   .hero__counter-sep {
@@ -2239,13 +2239,15 @@ ul {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 48px;
-    height: 48px;
-    border: 1.5px solid rgba(255, 255, 255, 0.6);
+    width: 24px;
+    height: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.6);
     border-radius: 50%;
     color: var(--white);
     margin-top: var(--space-5);
-    transition: background 0.3s, border-color 0.3s;
+    transition:
+      background 0.3s,
+      border-color 0.3s;
   }
   .hero__down svg {
     width: 20px;
