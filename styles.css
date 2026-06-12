@@ -1900,6 +1900,10 @@ ul {
   .compare__list b {
     display: block;
     margin-bottom: var(--space-1);
+    font-size: var(--text-md);
+    font-weight: 600;
+    color: var(--text-heading);
+    letter-spacing: var(--tracking-tight);
   }
   .compare__list li span {
     display: block;
