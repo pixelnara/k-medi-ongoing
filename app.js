@@ -158,10 +158,23 @@
     function wrapIndex(i) {
       return ((i % slideCount) + slideCount) % slideCount;
     }
+    let wrapTimer = null;
     function goFeature(i, anim) {
+      // When wrapping around (i out of [0, slideCount)), animate through the
+      // clone on that side, then silently teleport to the real slide position.
+      const shouldAnimate = anim !== false;
+      const needsClone = shouldAnimate && (i < 0 || i >= slideCount);
+      const visualIdx = needsClone ? cloneOffset + i : cloneOffset + wrapIndex(i);
       fIndex = wrapIndex(i);
-      setTranslate(baseFor(cloneOffset + fIndex), anim !== false);
+
+      setTranslate(baseFor(visualIdx), shouldAnimate);
       fDots.forEach((d, k) => d.classList.toggle("is-active", k === fIndex));
+
+      if (needsClone) {
+        clearTimeout(wrapTimer);
+        const targetReal = cloneOffset + fIndex;
+        wrapTimer = setTimeout(() => setTranslate(baseFor(targetReal), false), 620);
+      }
     }
     fDots.forEach((d, k) => d.addEventListener("click", () => goFeature(k)));
 
