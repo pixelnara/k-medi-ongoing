@@ -1723,8 +1723,8 @@ ul {
     margin-bottom: var(--space-4);
   }
   .gnb-cols {
-    gap: var(--space-8);
-    padding-top: var(--space-6);
+    gap: var(--space-10);
+    padding-top: var(--space-10);
     padding-bottom: var(--space-8);
   }
   .stay__grid {
