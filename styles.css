@@ -988,7 +988,7 @@ ul {
 }
 .compare__col {
   background: var(--gray-50);
-  padding: clamp(30px, 3vw, 46px);
+  padding: clamp(44px, 5vw, 64px);
 }
 .compare__col--ours {
   background: var(--gray-50);
@@ -1835,6 +1835,7 @@ ul {
   }
   .compare__col {
     background: var(--white);
+    padding: 48px;
   }
   .hiw-card {
     background: var(--white);
