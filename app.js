@@ -252,6 +252,31 @@
     window.requestAnimationFrame(() => goFeature(1, false));
   }
 
+  /* ---------- Mobile bar: language sheet ---------- */
+  const mbarLang = document.querySelector(".mbar-lang");
+  const langSheet = document.getElementById("langSheet");
+  if (mbarLang && langSheet) {
+    const backdrop = langSheet.querySelector(".lang-sheet__backdrop");
+    const closeLang = () => {
+      langSheet.classList.remove("is-open");
+      langSheet.setAttribute("aria-hidden", "true");
+      document.body.style.overflow = "";
+    };
+    mbarLang.addEventListener("click", () => {
+      langSheet.classList.add("is-open");
+      langSheet.setAttribute("aria-hidden", "false");
+      document.body.style.overflow = "hidden";
+    });
+    backdrop.addEventListener("click", closeLang);
+    langSheet.querySelectorAll(".lang-sheet__opt").forEach(btn => {
+      btn.addEventListener("click", () => {
+        langSheet.querySelectorAll(".lang-sheet__opt").forEach(b => b.classList.remove("is-active"));
+        btn.classList.add("is-active");
+        closeLang();
+      });
+    });
+  }
+
   /* ---------- Top button ---------- */
   const topBtn = document.querySelector(".top-btn");
   if (topBtn) {
