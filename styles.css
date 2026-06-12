@@ -1795,15 +1795,16 @@ ul {
   .gnb-overlay .wrap {
     padding-top: 0;
   }
+  /* depth1: 카테고리 레이블 — 작고 회색 */
   .gnb-col > h4 {
     display: block;
-    font-size: var(--text-2xl);
-    font-weight: 500;
-    color: var(--gray-900);
-    letter-spacing: var(--tracking-tight);
-    line-height: 1.4;
-    padding: var(--space-5) 0;
-    border-bottom: 1px solid var(--border);
+    font-size: var(--text-sm);
+    font-weight: 600;
+    color: var(--gray-400);
+    letter-spacing: var(--tracking-wide);
+    text-transform: uppercase;
+    padding: var(--space-6) 0 var(--space-3);
+    border-bottom: none;
     margin-bottom: 0;
   }
   .gnb-cols {
@@ -1813,34 +1814,42 @@ ul {
     padding: 0;
     border-top: 1px solid var(--border);
   }
+  /* depth2: 주 메뉴 — 크고 gray-900 */
   .gnb-col ul {
-    display: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
   }
-  .gnb-col a {
+  .gnb-col ul > li > a {
     display: block;
-    padding: var(--space-5) 0;
+    padding: var(--space-4) 0;
     font-size: var(--text-2xl);
     font-weight: 500;
-    color: var(--text-heading);
+    color: var(--gray-900);
     letter-spacing: var(--tracking-tight);
     line-height: 1.4;
     border-bottom: 1px solid var(--border);
   }
-  .gnb-sub-head {
-    display: none;
-  }
+  /* depth3: 시술 하위 메뉴 */
   .gnb-sub-list {
-    display: none;
-  }
-  .gnb-sub-list {
-    margin-top: var(--space-1);
-    margin-bottom: var(--space-2);
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    padding-left: var(--space-4);
+    border-left: 2px solid var(--border);
+    margin: var(--space-2) 0 var(--space-2);
   }
   .gnb-sub-list li a {
-    font-size: var(--text-md);
+    display: block;
+    font-size: var(--text-base);
+    font-weight: 400;
+    color: var(--gray-500);
     padding: var(--space-2) 0;
     border-bottom: none;
     line-height: 1.6;
+  }
+  .gnb-sub-head {
+    display: none;
   }
   .stay__grid {
     grid-template-columns: 1fr;
