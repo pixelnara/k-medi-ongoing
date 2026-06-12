@@ -1568,7 +1568,7 @@ ul {
   align-items: center;
 }
 .hiw-card__icon {
-  color: var(--text-caption);
+  color: var(--blue-700);
   margin-bottom: var(--space-7);
 }
 .hiw-card__icon svg {
