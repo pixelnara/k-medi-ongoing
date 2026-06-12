@@ -1570,10 +1570,10 @@ ul {
 }
 .acc-item {
   background: var(--gray-150);
-  transition: background 0.3s, color 0.3s;
+  transition: background 0.3s;
 }
 .acc-item.is-open {
-  background: var(--blue-500);
+  background: var(--white);
 }
 .acc-head {
   width: 100%;
@@ -1588,9 +1588,10 @@ ul {
   font-weight: 600;
   color: var(--text-heading);
   letter-spacing: var(--tracking-tight);
-  transition: color 0.3s;
+  transition: background 0.3s, color 0.3s;
 }
 .acc-item.is-open .acc-head {
+  background: var(--gray-950);
   color: var(--white);
 }
 .acc-icon {
