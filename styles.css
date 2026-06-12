@@ -2159,7 +2159,7 @@ ul {
   .header__right .btn {
     display: none;
   }
-  .brand {
+  .header__main .brand {
     display: none;
   }
   .header__tagline {
