@@ -2104,7 +2104,10 @@ ul {
     background: var(--white);
   }
   .compare__col--ours {
-    border: 2px solid var(--blue-700);
+    border: 2px solid var(--blue-600);
+  }
+  .compare__col--ours .compare__title {
+    border-bottom-color: var(--blue-600);
   }
   .compare__col:not(.compare__col--ours) {
     border: 2px solid var(--gray-950);
