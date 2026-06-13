@@ -2527,7 +2527,7 @@ ul {
     padding: 0 20px;
     height: 60px;
     flex: none;
-    gap: 6px;
+    gap: 7px;
   }
   /* Language bottom sheet */
   .lang-sheet.is-open {
