@@ -5,8 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>KMEDITOUR — Premium Concierge for Korea</title>
 <script src="https://cdn.tailwindcss.com"></script>
-<link rel="stylesheet" href="theme.css?v=20260613i" />
-<link rel="stylesheet" href="styles.css?v=20260613i" />
+<link rel="stylesheet" href="theme.css?v=20260613j" />
+<link rel="stylesheet" href="styles.css?v=20260613j" />
 </head>
 <body>
 
@@ -51,10 +51,17 @@
       </nav>
       <div class="header__right">
         <a href="#booking" class="btn btn--primary">상담 예약하기</a>
+        <!-- 상단바 공통: 알림 벨 -->
         <button class="header-bell" aria-label="알림">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
         </button>
-        <button class="menu-btn" aria-label="메뉴 열기"><span></span><span></span><span></span></button>
+        <!-- 상단바 v1: 햄버거 -->
+        <button class="menu-btn header-right--v1" aria-label="메뉴 열기"><span></span><span></span><span></span></button>
+        <!-- 상단바 v2: 언어변경 -->
+        <button class="header-lang-btn header-right--v2" aria-label="언어변경">
+          <span class="header-lang-flag">🇰🇷</span>
+          <span class="header-lang-code">KR</span>
+        </button>
       </div>
     </div>
   </div>
@@ -500,8 +507,8 @@
   </svg>
 </button>
 
-<!-- ════ Mobile Bottom Bar ════ -->
-<nav class="mobile-bar" aria-label="메인 메뉴">
+<!-- ════ Mobile Bottom Bar v1 (보관) ════ -->
+<nav class="mobile-bar mobile-bar--v1" aria-label="메인 메뉴 v1">
   <a class="mbar-btn" href="#" aria-label="이벤트">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
     <span class="mbar-label">이벤트</span>
@@ -518,6 +525,30 @@
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
     <span class="mbar-label">언어변경</span>
   </button>
+  <a class="mbar-btn" href="#" aria-label="마이페이지">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+    <span class="mbar-label">마이페이지</span>
+  </a>
+</nav>
+
+<!-- ════ Mobile Bottom Bar v2 ════ -->
+<nav class="mobile-bar mobile-bar--v2" aria-label="메인 메뉴 v2">
+  <button class="mbar-btn mbar-menu-trigger" aria-label="메뉴">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    <span class="mbar-label">메뉴</span>
+  </button>
+  <a class="mbar-btn" href="#booking" aria-label="상담예약">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+    <span class="mbar-label">상담예약</span>
+  </a>
+  <a class="mbar-btn" href="#" aria-label="홈">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+    <span class="mbar-label">홈</span>
+  </a>
+  <a class="mbar-btn" href="#" aria-label="이벤트">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+    <span class="mbar-label">이벤트</span>
+  </a>
   <a class="mbar-btn" href="#" aria-label="마이페이지">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
     <span class="mbar-label">마이페이지</span>

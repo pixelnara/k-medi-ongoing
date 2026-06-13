@@ -15,14 +15,16 @@
 
   /* ---------- GNB full-screen overlay ---------- */
   const overlay = document.querySelector(".gnb-overlay");
-  const openBtn = document.querySelector(".menu-btn");
+  const openBtns = document.querySelectorAll(".menu-btn, .mbar-menu-trigger");
   const closeBtn = document.querySelector(".gnb-overlay__close");
-  if (openBtn && overlay) {
-    openBtn.addEventListener("click", () => {
-      overlay.classList.add("is-open");
-      document.body.style.overflow = "hidden";
+  if (overlay) {
+    openBtns.forEach(btn => {
+      btn.addEventListener("click", () => {
+        overlay.classList.add("is-open");
+        document.body.style.overflow = "hidden";
+      });
     });
-    closeBtn.addEventListener("click", () => {
+    if (closeBtn) closeBtn.addEventListener("click", () => {
       overlay.classList.remove("is-open");
       document.body.style.overflow = "";
       document.querySelectorAll(".gnb-col.is-open").forEach(c => c.classList.remove("is-open"));
