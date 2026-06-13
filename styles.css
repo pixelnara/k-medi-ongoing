@@ -415,7 +415,7 @@ ul {
   cursor: pointer;
 }
 .header-lang-code {
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 800;
   letter-spacing: 0.04em;
   color: var(--gray-950);
@@ -446,7 +446,7 @@ ul {
   color: var(--gray-950);
 }
 .header-lang-code {
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 700;
   letter-spacing: 0.04em;
   color: var(--gray-950);
@@ -2251,7 +2251,7 @@ ul {
     display: flex;
     align-items: center;
     color: var(--gray-950);
-    gap: 4px;
+    gap: 6px;
     width: auto;
     height: auto;
   }
@@ -2441,7 +2441,7 @@ ul {
     border-radius: 50%;
     gap: 0;
     padding: 0;
-    margin: 0 10px;
+    margin: 0 20px;
   }
   .mbar-btn--home svg {
     width: 18px;
