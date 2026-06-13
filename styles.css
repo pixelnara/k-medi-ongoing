@@ -2202,16 +2202,14 @@ ul {
     display: none;
   }
   .header__main .brand {
-    display: none;
+    display: block;
+    font-size: 18px;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    color: var(--gray-950);
   }
   .header__tagline {
-    display: block;
-    font-size: var(--text-18);
-    font-weight: 700;
-    letter-spacing: var(--tracking-tight);
-    text-transform: uppercase;
-    color: inherit;
-    white-space: nowrap;
+    display: none;
   }
   .header-bell {
     display: flex;
