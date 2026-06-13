@@ -200,7 +200,7 @@ ul {
     box-shadow 0.5s ease;
 }
 .header__util {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.6);
   transition: border-color 0.5s ease;
 }
 .header__util .wrap {
@@ -2221,26 +2221,26 @@ ul {
     display: none;
   }
   .hero__counter {
-    position: static;
-    transform: none;
-    background: none;
-    color: rgba(255, 255, 255, 0.88);
-    font-size: var(--text-13);
-    font-weight: 600;
-    letter-spacing: 0.02em;
-    padding: 0;
-    margin-top: var(--space-4);
-    gap: var(--space-2px);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: calc(80px + 44px);
+    margin-top: 0;
+    background: rgba(0, 0, 0, 0.45);
+    color: var(--white);
+    letter-spacing: 0.06em;
+    padding: 3px 12px;
+    gap: 2px;
   }
   .hero__counter-sep {
-    opacity: 0.6;
+    opacity: 0.5;
   }
   .hero__scroll {
     display: flex;
     align-items: center;
     gap: 4px;
     position: absolute;
-    bottom: calc(76px + 16px);
+    bottom: calc(80px + 12px);
     left: 50%;
     transform: translateX(-50%);
     color: rgba(255, 255, 255, 0.7);
