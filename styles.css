@@ -358,7 +358,7 @@ ul {
 .header__right {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 14px;
 }
 .header__right .btn {
   min-width: unset;
@@ -1982,7 +1982,7 @@ ul {
 }
 @media (max-width: 860px) {
   :root {
-    --header-h: 80px;
+    --header-h: 70px;
   }
   .gnb-overlay .wrap {
     padding-top: var(--space-10);
