@@ -2171,7 +2171,7 @@ ul {
     font-weight: 700;
     letter-spacing: var(--tracking-tight);
     text-transform: uppercase;
-    color: var(--white);
+    color: inherit;
     white-space: nowrap;
   }
   .menu-btn {
@@ -2235,23 +2235,28 @@ ul {
   .hero__counter-sep {
     opacity: 0.6;
   }
-  .hero__down {
+  .hero__scroll {
     display: flex;
     align-items: center;
-    justify-content: center;
-    color: rgba(255, 255, 255, 0.65);
-    margin-top: var(--space-4);
+    gap: 4px;
+    position: absolute;
+    bottom: calc(76px + 16px);
+    left: 50%;
+    transform: translateX(-50%);
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-decoration: none;
+    text-transform: uppercase;
     transition: color 0.3s;
   }
-  .hero__down svg {
-    width: 12px;
-    height: 40px;
+  .hero__scroll svg {
+    width: 14px;
+    height: 14px;
   }
-  .hero__down:hover {
+  .hero__scroll:hover {
     color: rgba(255, 255, 255, 1);
-  }
-  .hero__scroll {
-    display: none;
   }
 
   /* Mobile bottom bar */
@@ -2282,7 +2287,7 @@ ul {
     flex: 1;
     height: 100%;
     padding: 0;
-    color: var(--gray-800);
+    color: var(--gray-900);
     font-size: 0;
     transition: color 0.2s;
     text-decoration: none;
