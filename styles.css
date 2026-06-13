@@ -2331,8 +2331,9 @@ ul {
   .hero__title {
     margin-top: 0;
     font-size: clamp(29px, 5.2vw, 32px);
+    word-spacing: 0.05em;
     line-height: 1.3;
-    letter-spacing: -0.02em;
+    letter-spacing: 0em;
     text-align: center;
     font-weight: 650;
   }
@@ -2497,6 +2498,12 @@ ul {
     color: var(--gray-500);
     padding-top: 1px;
     white-space: nowrap;
+  }
+  .mbar-logo--box {
+    border: 1.5px solid var(--gray-950);
+    border-radius: 2px;
+    padding: 6px 14px;
+    height: auto;
   }
   /* Language bottom sheet */
   .lang-sheet.is-open {
