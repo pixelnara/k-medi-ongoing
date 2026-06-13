@@ -421,13 +421,23 @@ ul {
   color: var(--gray-950);
   line-height: 1;
 }
+.lang-flag-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: var(--gray-950);
+  flex-shrink: 0;
+}
 .header-lang-flag-img {
   width: 22px;
   height: 22px;
   object-fit: cover;
   border-radius: 50%;
   display: block;
-  border: 1.5px solid var(--gray-200);
+  border: none;
 }
 .header-lang-code {
   font-size: 11px;
