@@ -595,7 +595,7 @@ ul {
   font-size: var(--text-16);
   font-weight: 700;
   letter-spacing: 0.06em;
-  padding: 3px 12px;
+  padding: 3px 12px 4px;
   border-radius: var(--radius-1px);
 }
 .hero__counter-sep {
