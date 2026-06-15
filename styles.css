@@ -1811,7 +1811,7 @@ ul {
   transition: transform 0.25s ease;
   stroke-width: 2.5;
 }
-.gnb-has-sub.is-open .gnb-sub-chevron {
+.gnb-has-sub.is-open > .gnb-item-row .gnb-sub-chevron {
   transform: rotate(180deg);
 }
 .gnb-item-row {
@@ -2352,7 +2352,7 @@ ul {
     transition: transform 0.25s ease;
     stroke-width: 2.5;
   }
-  .gnb-has-sub.is-open .gnb-sub-chevron {
+  .gnb-has-sub.is-open > .gnb-item-row .gnb-sub-chevron {
     transform: rotate(180deg);
   }
   /* show sub-list when toggled open */
