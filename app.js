@@ -310,6 +310,15 @@
     });
   }
 
+  /* ---------- Mobile bottom bar: active state ---------- */
+  const mbarBtns = document.querySelectorAll(".mobile-bar .mbar-btn");
+  mbarBtns.forEach(btn => {
+    btn.addEventListener("click", () => {
+      mbarBtns.forEach(b => b.classList.remove("is-active"));
+      btn.classList.add("is-active");
+    });
+  });
+
   /* ---------- Top button ---------- */
   const topBtn = document.querySelector(".top-btn");
   if (topBtn) {
