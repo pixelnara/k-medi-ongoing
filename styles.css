@@ -2241,8 +2241,80 @@ body:has(.gnb-overlay.is-open) {
     color: var(--text-body);
   }
 }
+.gnb-banners {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  margin-top: var(--space-36);
+  margin-left: calc(-1 * var(--gutter));
+  margin-right: calc(-1 * var(--gutter));
+}
 .gnb-banner {
-  display: none;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: var(--space-40) var(--space-40);
+  min-height: 210px;
+  color: var(--white);
+  text-decoration: none;
+  overflow: hidden;
+}
+.gnb-banner::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.5s ease;
+}
+.gnb-banner:hover::before {
+  transform: scale(1.04);
+}
+.gnb-banner::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.68) 0%, rgba(0,0,0,0.12) 100%);
+}
+.gnb-banner--hugro::before {
+  background-image: url('assets/img-building.png');
+}
+.gnb-banner--skin::before {
+  background-image: url('https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=1200&q=80');
+}
+.gnb-banner__inner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+.gnb-banner__label {
+  font-size: var(--text-11);
+  font-weight: 600;
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  opacity: 0.55;
+}
+.gnb-banner__title {
+  font-size: var(--text-25);
+  font-weight: 600;
+  letter-spacing: var(--tracking-tight);
+}
+.gnb-banner__sub {
+  font-size: var(--text-12);
+  opacity: 0.65;
+  margin-top: var(--space-4);
+}
+.gnb-banner__arrow {
+  position: relative;
+  z-index: 1;
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+  opacity: 0.8;
+  align-self: flex-end;
 }
 .gnb-col--mobile-only {
   display: none;
@@ -3169,45 +3241,17 @@ body:has(.gnb-overlay.is-open) {
   .gnb-col.is-open ul .gnb-has-sub.is-open .gnb-sub-list .gnb-sub-list li:last-child a {
     border-bottom: none;
   }
-  .gnb-banner {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  .gnb-banners {
+    grid-template-columns: 1fr;
     margin-top: var(--space-32);
+    gap: 1px;
+  }
+  .gnb-banner {
     padding: var(--space-24) var(--space-24);
-    background:
-      linear-gradient(rgba(0, 0, 0, 0.58), rgba(0, 0, 0, 0.58)),
-      url("assets/img-building2.png") center/cover no-repeat;
-    color: var(--white);
-    text-decoration: none;
+    min-height: 130px;
   }
-  .gnb-banner__inner {
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-4);
-  }
-  .gnb-banner__label {
-    font-size: var(--text-11);
-    font-weight: 600;
-    letter-spacing: var(--tracking-wider);
-    text-transform: uppercase;
-    opacity: 0.55;
-  }
-  .gnb-banner__title {
-    font-size: var(--text-25);
-    font-weight: 600;
-    letter-spacing: var(--tracking-tight);
-  }
-  .gnb-banner__sub {
-    font-size: var(--text-12);
-    opacity: 0.65;
-    margin-top: var(--space-4);
-  }
-  .gnb-banner__arrow {
-    width: 22px;
-    height: 22px;
-    flex-shrink: 0;
-    opacity: 0.8;
+  .gnb-banner--hugro::before {
+    background-image: url("assets/img-building2.png");
   }
   /* 시술 서브리스트 — 모바일: 토글 버튼·하위 목록 숨김, 항목은 일반 텍스트처럼 */
   .gnb-sub-list .gnb-has-sub .gnb-sub-toggle {
