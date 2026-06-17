@@ -247,6 +247,14 @@ ul {
   transition: opacity 0.2s;
 }
 .util-user-btn:hover { opacity: 1; }
+.util-ext-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  white-space: nowrap;
+  text-decoration: none;
+  color: inherit;
+}
 .util-user-circle {
   display: inline-flex;
   align-items: center;
