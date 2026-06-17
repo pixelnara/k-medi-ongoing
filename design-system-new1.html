@@ -61,7 +61,7 @@ h2 { font-weight: 700; color: var(--text-heading); font-size: 28px; margin: 56px
 .sw .n { font-size: 13.5px; color: var(--text-heading); font-weight: 600; line-height: 1.3; word-break: break-all; }
 .sw .h { font-size: 12.5px; color: var(--text-body); margin-top: 3px; font-weight: 400; }
 .sw .h .pm { display: none; }
-.sw .h .pm .pn { color: var(--violet-500); font-weight: 600; }
+.sw .h .pm .pn { color: var(--text-caption); font-weight: 600; }
 body.show-prim .sw .h .pm { display: inline; }
 .fan { position: absolute; top: 8px; right: 8px; font-size: 12px; font-weight: 700; color: var(--white); background: rgba(0,0,0,.32); border-radius: 99px; padding: 2px 8px; backdrop-filter: blur(2px); }
 .fan.hot { background: var(--text-caption); }
@@ -649,6 +649,62 @@ body.show-prim .sw .h .pm { display: inline; }
     <strong>모바일:</strong> 1열 수평 · 아이콘 40×40px, SVG 숨김 · <code style="font-size:12px;background:var(--surface);padding:2px 7px;border-radius:4px;">::before</code> data-num 숫자 표시 · step <code style="font-size:12px;background:var(--surface);padding:2px 7px;border-radius:4px;">--text-18</code> · desc <code style="font-size:12px;background:var(--surface);padding:2px 7px;border-radius:4px;">--text-13</code>
   </div>
 
+  <h2>Mobile Bottom Bar</h2>
+  <p class="comp-label">다크 · gray-950 · 전폭 flush-bottom · 5 버튼 · iOS safe-area 대응</p>
+  <div style="max-width:480px;background:var(--gray-950);display:flex;border-radius:12px;overflow:hidden;margin-bottom:8px;">
+    <a style="flex:1;height:80px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;color:#fff;text-decoration:none;">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9.5L12 3l9 6.5V20a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9.5z"/><polyline points="9 21 9 12 15 12 15 21"/></svg>
+      <span style="font-size:10px;font-weight:600;">홈</span>
+    </a>
+    <a style="flex:1;height:80px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;color:rgba(255,255,255,0.5);text-decoration:none;">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+      <span style="font-size:10px;font-weight:600;">상담예약</span>
+    </a>
+    <a style="flex:1;height:80px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;color:rgba(255,255,255,0.5);text-decoration:none;">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+      <span style="font-size:10px;font-weight:600;">쇼핑</span>
+    </a>
+    <a style="flex:1;height:80px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;color:rgba(255,255,255,0.5);text-decoration:none;">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+      <span style="font-size:10px;font-weight:600;">이벤트</span>
+    </a>
+    <a style="flex:1;height:80px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;color:rgba(255,255,255,0.5);text-decoration:none;">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="9" r="3"/><path d="M6.5 20v-.5a5.5 5.5 0 0 1 11 0v.5"/></svg>
+      <span style="font-size:10px;font-weight:600;">마이</span>
+    </a>
+  </div>
+  <div style="font-size:13px;color:var(--text-body);margin-top:4px;line-height:2.2;">
+    background: <code style="font-size:12px;background:var(--surface);padding:2px 7px;border-radius:4px;">--gray-950</code> · height: <code style="font-size:12px;background:var(--surface);padding:2px 7px;border-radius:4px;">calc(80px + env(safe-area-inset-bottom, 0px))</code><br>
+    active: <code style="font-size:12px;background:var(--surface);padding:2px 7px;border-radius:4px;">--white</code> · idle: <code style="font-size:12px;background:var(--surface);padding:2px 7px;border-radius:4px;">rgba(255,255,255,0.5)</code> · 아이콘 26×26px · 레이블 10px 600 · 숨김: translateY(100%)
+  </div>
+
+  <h2>GNB Banners (듀얼 배너)</h2>
+  <p class="comp-label">desktop: grid 1fr·1fr full-bleed · mobile: 세로 스택 · GNB 오버레이 하단 flush</p>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:1px;border-radius:8px;overflow:hidden;margin-bottom:8px;">
+    <div style="position:relative;min-height:180px;display:flex;align-items:flex-end;justify-content:space-between;padding:24px;background:linear-gradient(to top,rgba(0,0,0,0.68),rgba(0,0,0,0.12)),url('assets/img-building.png') center/cover,var(--gray-800);color:#fff;">
+      <div>
+        <p style="font-size:11px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:rgba(255,255,255,.55);margin:0 0 4px;">Premium Space</p>
+        <p style="font-size:25px;font-weight:600;margin:0 0 2px;font-family:Optima,Candara,sans-serif;letter-spacing:-0.01em;">휴그로센터</p>
+        <p style="font-size:12.5px;color:rgba(255,255,255,.65);margin:0;margin-top:4px;">의료 뷰티 여행 토탈 케어 공간</p>
+      </div>
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.8)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;align-self:flex-end;"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+    </div>
+    <div style="position:relative;min-height:180px;display:flex;align-items:flex-end;justify-content:space-between;padding:24px;background:linear-gradient(to top,rgba(0,0,0,0.68),rgba(0,0,0,0.12)),url('https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=600&q=80') center/cover,var(--gray-600);color:#fff;">
+      <div>
+        <p style="font-size:11px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:rgba(255,255,255,.55);margin:0 0 4px;">Skin Solution</p>
+        <p style="font-size:25px;font-weight:600;margin:0 0 2px;font-family:Optima,Candara,sans-serif;letter-spacing:-0.01em;">퍼스널 스킨 솔루션</p>
+        <p style="font-size:12.5px;color:rgba(255,255,255,.65);margin:0;margin-top:4px;">나만의 피부 타입 맞춤 케어</p>
+      </div>
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.8)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;align-self:flex-end;"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+    </div>
+  </div>
+  <div style="font-size:13px;color:var(--text-body);margin-top:4px;line-height:2.2;">
+    layout: <code style="font-size:12px;background:var(--surface);padding:2px 7px;border-radius:4px;">grid 1fr 1fr · gap 1px · margin ±var(--gutter)</code> full-bleed of .wrap · mobile: 1fr stack<br>
+    overlay: <code style="font-size:12px;background:var(--surface);padding:2px 7px;border-radius:4px;">linear-gradient(to top, rgba(0,0,0,.68) → .12)</code> · hover: bg scale(1.04) 0.5s<br>
+    desktop min-height: <code style="font-size:12px;background:var(--surface);padding:2px 7px;border-radius:4px;">210px</code> · mobile: <code style="font-size:12px;background:var(--surface);padding:2px 7px;border-radius:4px;">130px</code> · align: flex-end<br>
+    label: 11px 600 tracking-wider uppercase · title: Optima --text-25 600 · sub: --text-12 opacity .65
+  </div>
+
 </section>
 
 <script>
@@ -693,9 +749,11 @@ const PRIM = {
   '#f2f4f8': ['gray-50',    'Gray'],
   '#e4e6ec': ['gray-150',   'Gray'],
   '#dcdfe5': ['gray-200',   'Gray'],
+  '#b8bdc7': ['gray-300',   'Gray'],
   '#949aa8': ['gray-400',   'Gray'],
   '#6b7180': ['gray-500',   'Gray'],
   '#515767': ['gray-600',   'Gray'],
+  '#3d4352': ['gray-700',   'Gray'],
   '#292e3d': ['gray-800',   'Gray'],
   '#1a1e28': ['gray-900',   'Gray'],
   '#101219': ['gray-950',   'Gray'],
@@ -846,7 +904,7 @@ const typeData = [
   { token: '--text-14',  val: '14px',                      label: '버튼 · 필터 · lang-flag' },
   { token: '--text-15',  val: '15px',                      label: '아이브로우 · UI 보조' },
   { token: '--text-16',  val: '16px',                      label: '본문 기준 · lead · booking tab' },
-  { token: '--text-17',  val: '17px',                      label: '본문 텍스트 · 탭 UI' },
+  { token: '--text-17',  val: '17px',                      label: '본문 텍스트 · 탭 UI · lang-sheet 제목' },
   { token: '--text-18',  val: '18px',                      label: 'CTA 설명 · 멤버십' },
   { token: '--text-19',  val: '19px',                      label: 'GNB · 카드 설명 · 아코디언(모바일)' },
   { token: '--text-20',  val: '20px',                      label: '뉴스 카드 제목' },
@@ -856,6 +914,7 @@ const typeData = [
   { token: '--text-25',  val: '25px',                      label: '뉴스 카드 대제목' },
   { token: '--text-28',  val: '28px',                      label: 'Stay 카드 제목' },
   { token: '--text-30',  val: '30px',                      label: '히어로 설명 · 카드 타이틀' },
+  { token: '--text-32',  val: '32px',                      label: '섹션 서브헤딩' },
   { token: '--text-34',  val: 'clamp(24px, 2.4vw, 34px)',  label: '섹션 소제목' },
   { token: '--text-46',  val: 'clamp(30px, 3.4vw, 46px)',  label: '섹션 제목' },
   { token: '--text-76',  val: 'clamp(38px, 5.4vw, 76px)',  label: '대형 헤딩' },
@@ -867,7 +926,7 @@ const previewSizes = {
   '--text-14':'14px','--text-15':'15px','--text-16':'16px','--text-17':'17px',
   '--text-18':'18px','--text-19':'19px','--text-20':'20px','--text-21':'21px',
   '--text-23':'23px','--text-24':'24px','--text-25':'25px','--text-28':'28px',
-  '--text-30':'30px','--text-34':'28px','--text-46':'32px',
+  '--text-30':'30px','--text-32':'32px','--text-34':'28px','--text-46':'32px',
   '--text-76':'36px','--text-80':'40px','--text-104':'44px'
 };
 const typeWrap = document.getElementById('typeRows');
@@ -906,6 +965,7 @@ trackData.forEach(({ token, val, label }) => {
 
 /* ─── 탭4: Spacing ─── */
 const spaceData = [
+  { token: '--space-0',      val: '0px' },
   { token: '--space-2',      val: '2px' },
   { token: '--space-3',      val: '3px' },
   { token: '--space-4',      val: '4px' },
