@@ -2054,6 +2054,9 @@ ul {
 .mo-br {
   display: none;
 }
+.hero-desc-br {
+  display: none;
+}
 
 .services__intro {
   text-align: center;
@@ -3665,5 +3668,10 @@ ul {
 @media (min-width: 861px) {
   .proc-sheet {
     display: none !important;
+  }
+}
+@media (max-width: 500px) {
+  .hero-desc-br {
+    display: inline;
   }
 }
