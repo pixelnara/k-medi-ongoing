@@ -3469,16 +3469,16 @@ body:has(.gnb-overlay.is-open) {
   }
   .mbar-btn--cta {
     flex: 1;
-    height: 100%;
-    padding: 0;
+    height: 68px;
+    padding: 10px 0 0;
     border-radius: 0;
-    gap: 4px;
+    gap: 5px;
     font-size: 11px;
     margin: 0;
   }
   .mbar-btn--cta svg {
-    width: 17px;
-    height: 17px;
+    width: 26px;
+    height: 26px;
   }
   .mbar-btn--cta .mbar-label {
     font-size: 10px;
