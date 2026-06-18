@@ -773,7 +773,7 @@
   }
   .why-cta,
   .treat-cta {
-    margin-top: 32px;
+    margin-top: 0;
     margin-left: calc(-1 * var(--gutter));
     margin-right: calc(-1 * var(--gutter));
   }
@@ -791,7 +791,7 @@
   }
   .why-journey__icon-item:last-child {
     border-bottom: none;
-    padding-bottom: 0;
+    padding-bottom: 32px;
   }
   .why-journey__icon-wrap {
     width: 72px;
@@ -1321,7 +1321,7 @@
   }
   .treat-cta,
   .why-cta {
-    margin-top: 32px;
+    margin-top: 0;
   }
   .treat-cta .btn,
   .why-cta .btn,
