@@ -344,7 +344,6 @@ body {
   color: var(--text-gray-7);
   outline: none;
   transition: border-color 0.2s;
-  box-sizing: border-box;
 }
 .login-modal__input:focus {
   border: 2px solid var(--text-gray-7);
@@ -2356,8 +2355,6 @@ body:has(.gnb-overlay.is-open) {
   color: var(--text-gray-6);
 }
 .proc-sheet__list {
-  list-style: none;
-  margin: 0;
   padding: 0 20px;
 }
 .proc-sheet__list li a {
