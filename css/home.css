@@ -714,51 +714,68 @@
 
 /* Journey Banner Card */
 .why-journey {
-  background: var(--brown-50);
-  border: 1px solid var(--gold-500);
-  padding: clamp(36px, 5vw, 60px) clamp(28px, 4vw, 60px);
-  text-align: center;
+  background: var(--brown-100);
+  padding: clamp(44px, 5vw, 64px) clamp(28px, 4vw, 56px);
   margin-bottom: clamp(32px, 4vw, 52px);
 }
-
-.why-journey__icons {
-  display: flex;
-  justify-content: center;
-  gap: clamp(20px, 4vw, 56px);
-  flex-wrap: wrap;
-  list-style: none;
-  padding: 0;
-  margin: 0;
+.why-hiw__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
 }
-.why-journey__icon-item {
+.why-hiw-card {
+  padding: 0 clamp(24px, 3vw, 48px);
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: var(--space-12);
-  width: 100px;
+  align-items: flex-start;
 }
-.why-journey__icon-wrap {
+.why-hiw-card:first-child {
+  padding-left: 0;
+}
+.why-hiw-card:last-child {
+  padding-right: 0;
+}
+.why-hiw-card__icon {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: var(--gold-600);
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 68px;
-  height: 68px;
-  border-radius: 50%;
-  background: rgba(155, 121, 67, 0.1);
-  color: var(--gold-600);
+  color: var(--white);
+  margin-bottom: var(--space-40);
   flex-shrink: 0;
 }
-.why-journey__icon-wrap svg {
-  width: 32px;
-  height: 32px;
+.why-hiw-card__icon svg {
+  width: 34px;
+  height: 34px;
+  display: block;
 }
-.why-journey__icon-label {
+.why-hiw-card__step {
   font-family: var(--font-sans);
-  font-size: var(--text-12);
-  font-weight: 500;
+  color: var(--text-gray-6);
+  font-size: clamp(20px, 1.6vw, 26px);
+  font-weight: 700;
+  letter-spacing: var(--tracking-tight);
+  margin-bottom: var(--space-16);
+}
+.why-hiw-step__prefix {
+  display: inline;
+  color: var(--text-gray-2);
+  font-weight: 400;
+}
+.why-hiw-card__step b {
+  color: var(--text-gray-6);
+  font-weight: 600;
+  font-style: italic;
+}
+.why-hiw-card__desc {
   color: var(--text-gray-4);
-  text-align: center;
-  line-height: 1.45;
+  font-size: var(--text-15);
+  font-weight: 400;
+  line-height: 1.85;
+  word-break: keep-all;
 }
 
 /* Services Accordion */
@@ -839,16 +856,12 @@
   padding-top: clamp(36px, 4vw, 52px);
 }
 @media (max-width: 760px) {
-  .why-journey__icon-wrap {
-    width: 54px;
-    height: 54px;
+  .why-hiw__grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-40);
   }
-  .why-journey__icon-wrap svg {
-    width: 26px;
-    height: 26px;
-  }
-  .why-journey__icon-item {
-    width: 80px;
+  .why-hiw-card {
+    padding: 0;
   }
 }
 
