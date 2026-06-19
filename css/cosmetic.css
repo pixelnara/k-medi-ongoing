@@ -1,0 +1,339 @@
+/* ============================================================
+   COSMETIC PAGE — cosmetic.css
+   ============================================================ */
+
+/* ── Header: 처음부터 solid 상태 고정 (스크롤 전 투명 상태 건너뜀) ── */
+.header {
+  background: var(--bg-white);
+  color: var(--text-gray-6);
+  box-shadow: 0 1px 0 var(--border-gray-1);
+}
+.header .brand {
+  color: var(--text-gray-7);
+}
+.header .header__util {
+  border-color: var(--border-gray-1);
+}
+.header .link-arrow {
+  color: var(--text-gray-6);
+}
+.header .link-arrow::after {
+  background: var(--text-gray-6);
+}
+
+/* ── Hero ── */
+.cosm-hero {
+  padding: calc(var(--header-h) + 48px) 0 44px;
+  text-align: center;
+  border-bottom: 1px solid var(--border-gray-1);
+  background: var(--bg-white);
+}
+.cosm-hero .eyebrow {
+  font-size: var(--text-12);
+  font-weight: 700;
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  color: var(--text-caption);
+  margin-bottom: var(--space-12);
+}
+.cosm-hero__title {
+  font-size: var(--text-34);
+  font-weight: 700;
+  color: var(--text-gray-6);
+  letter-spacing: var(--tracking-tight);
+  margin-bottom: var(--space-12);
+}
+.cosm-hero__sub {
+  font-size: var(--text-15);
+  color: var(--text-gray-3);
+  line-height: 1.6;
+}
+
+/* ── Shop Section ── */
+.cosm-shop {
+  padding: var(--space-40) 0 var(--space-80);
+  background: var(--bg-white);
+}
+
+/* ── Controls Bar ── */
+.cosm-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-32);
+  gap: var(--space-16);
+}
+.cosm-controls__left {
+  display: flex;
+  align-items: center;
+  gap: var(--space-16);
+}
+.cosm-controls__right {
+  display: flex;
+  align-items: center;
+  gap: var(--space-12);
+}
+.cosm-count {
+  font-size: var(--text-14);
+  color: var(--text-gray-3);
+}
+.cosm-count strong {
+  color: var(--text-gray-6);
+  font-weight: 700;
+}
+
+/* ── Custom Select ── */
+.cosm-select {
+  position: relative;
+}
+.cosm-select-btn {
+  display: flex;
+  align-items: center;
+  gap: var(--space-6);
+  padding: var(--space-8) var(--space-14);
+  background: var(--bg-white);
+  border: 1.5px solid var(--border-gray-1);
+  border-radius: 6px;
+  font-size: var(--text-14);
+  font-weight: 600;
+  color: var(--text-gray-6);
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s;
+  white-space: nowrap;
+}
+.cosm-select-btn:hover {
+  border-color: var(--border-gray-4);
+  background: var(--surface-gray-1);
+}
+.cosm-select-btn.is-open {
+  border-color: var(--text-caption);
+  color: var(--text-caption);
+}
+.cosm-select-btn svg {
+  width: 14px;
+  height: 14px;
+  transition: transform 0.2s;
+  flex-shrink: 0;
+}
+.cosm-select-btn.is-open svg {
+  transform: rotate(180deg);
+}
+.cosm-select-dropdown {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  min-width: 140px;
+  background: var(--bg-white);
+  border: 1.5px solid var(--border-gray-1);
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+  z-index: 200;
+  overflow: hidden;
+  display: none;
+  padding: var(--space-4) 0;
+}
+.cosm-select-dropdown--right {
+  left: auto;
+  right: 0;
+}
+.cosm-select-dropdown.is-open {
+  display: block;
+}
+.cosm-select-dropdown li {
+  display: flex;
+  align-items: center;
+  gap: var(--space-8);
+  padding: var(--space-10) var(--space-16);
+  font-size: var(--text-14);
+  color: var(--text-gray-3);
+  cursor: pointer;
+  transition: background 0.12s;
+}
+.cosm-select-dropdown li:hover {
+  background: var(--surface-gray-1);
+  color: var(--text-gray-6);
+}
+.cosm-select-dropdown li.is-active {
+  color: var(--text-caption);
+  font-weight: 700;
+}
+.cosm-select-dropdown li.is-active::before {
+  content: '';
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--text-caption);
+  flex-shrink: 0;
+}
+.cosm-select-dropdown li:not(.is-active)::before {
+  content: '';
+  display: inline-block;
+  width: 6px;
+  flex-shrink: 0;
+}
+
+/* ── Search Button ── */
+.cosm-search-btn {
+  width: var(--space-36);
+  height: var(--space-36);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  color: var(--text-gray-4);
+  border: 1.5px solid var(--border-gray-1);
+  transition: all 0.15s;
+}
+.cosm-search-btn:hover {
+  background: var(--surface-gray-1);
+  color: var(--text-gray-6);
+  border-color: var(--border-gray-4);
+}
+.cosm-search-btn svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* ── Product Grid ── */
+.cosm-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-24);
+}
+.cosm-grid:empty::after {
+  content: '상품이 없습니다.';
+  display: block;
+  grid-column: 1/-1;
+  text-align: center;
+  padding: var(--space-80) 0;
+  color: var(--text-gray-2);
+  font-size: var(--text-15);
+}
+
+/* ── Product Card ── */
+.cosm-card {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+.cosm-card:hover .cosm-card__img {
+  transform: scale(1.04);
+}
+.cosm-card__img-wrap {
+  position: relative;
+  aspect-ratio: 3/4;
+  border-radius: 8px;
+  overflow: hidden;
+  background: var(--surface-gray-1);
+  margin-bottom: var(--space-12);
+}
+.cosm-card__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+.cosm-card__tags {
+  position: absolute;
+  top: var(--space-10);
+  right: var(--space-10);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: var(--space-4);
+  max-width: 120px;
+}
+.cosm-tag {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 9.5px;
+  font-weight: 700;
+  color: var(--text-white);
+  text-align: center;
+  line-height: 1.2;
+  padding: 0 var(--space-3);
+}
+/* 태그 색상 (6색 순환) */
+.cosm-tag--0 { background: var(--violet-500); }
+.cosm-tag--1 { background: var(--violet-800); }
+.cosm-tag--2 { background: var(--gray-800); }
+.cosm-tag--3 { background: var(--teal-500); }
+.cosm-tag--4 { background: #b0527a; }
+.cosm-tag--5 { background: var(--amber-500); }
+
+.cosm-card__body {
+  padding: 0 var(--space-2);
+}
+.cosm-card__name {
+  font-size: var(--text-14);
+  font-weight: 600;
+  color: var(--text-gray-6);
+  line-height: 1.45;
+  margin-bottom: var(--space-6);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.cosm-card__meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-8);
+}
+.cosm-card__price {
+  font-size: var(--text-15);
+  font-weight: 700;
+  color: var(--text-gray-7);
+}
+.cosm-card__rating {
+  font-size: var(--text-12);
+  color: var(--rating);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+/* ── Responsive ── */
+@media (max-width: 1100px) {
+  .cosm-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-20);
+  }
+}
+@media (max-width: 860px) {
+  .cosm-hero {
+    padding: calc(var(--header-h) + 32px) 0 32px;
+  }
+  .cosm-hero__title {
+    font-size: clamp(24px, 5vw, 34px);
+  }
+  .cosm-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-16);
+  }
+  .cosm-controls {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-12);
+  }
+  .cosm-controls__right {
+    align-self: flex-end;
+  }
+  .cosm-shop {
+    padding-bottom: calc(var(--space-80) + env(safe-area-inset-bottom, 0px) + var(--space-16));
+  }
+}
+@media (max-width: 480px) {
+  .cosm-tag {
+    width: 38px;
+    height: 38px;
+    font-size: 8.5px;
+  }
+}
