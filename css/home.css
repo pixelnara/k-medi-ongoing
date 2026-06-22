@@ -4,9 +4,9 @@
   border-color: transparent;
 }
 @media (hover: hover) {
-.header__right .btn--primary:hover {
-  background: var(--gray-950);
-}
+  .header__right .btn--primary:hover {
+    background: var(--gray-950);
+  }
 }
 
 /* ============================================================
@@ -109,10 +109,10 @@
   transition: background 0.2s;
 }
 @media (hover: hover) {
-.hero__nav:hover {
-  background: var(--bg-white);
-  color: var(--gray-950);
-}
+  .hero__nav:hover {
+    background: var(--bg-white);
+    color: var(--gray-950);
+  }
 }
 .hero__nav svg {
   stroke-width: 3;
@@ -147,9 +147,9 @@
   transition: color 0.2s;
 }
 @media (hover: hover) {
-.hero__down-btn:hover {
-  color: var(--text-white);
-}
+  .hero__down-btn:hover {
+    color: var(--text-white);
+  }
 }
 @keyframes hero-bounce {
   0%,
@@ -257,9 +257,9 @@
   transition: transform 1.1s cubic-bezier(0.2, 0.7, 0.2, 1);
 }
 @media (hover: hover) {
-.stay-card:hover .stay-card__bg {
-  transform: scale(1.06);
-}
+  .stay-card:hover .stay-card__bg {
+    transform: scale(1.06);
+  }
 }
 .stay-card::after {
   content: "";
@@ -313,10 +313,10 @@
     color 0.3s;
 }
 @media (hover: hover) {
-.stay-card__tags span:hover {
-  background: var(--bg-white);
-  color: var(--text-gray-6);
-}
+  .stay-card__tags span:hover {
+    background: var(--bg-white);
+    color: var(--text-gray-6);
+  }
 }
 
 /* ============================================================
@@ -331,11 +331,19 @@
 #why {
   padding-bottom: clamp(24px, 3vw, 40px);
 }
+/* 모바일: 피처 슬라이더 하단 여백 제거 → '한국 여행 소식' 라인 위 여백을
+   '매거진' 라인 위 여백과 동일하게 맞춤 (다음 섹션 padding-top이 간격 담당) */
+@media (max-width: 860px) {
+  .feature {
+    padding-bottom: 0;
+  }
+}
 .feature__viewport {
   width: 100%;
   overflow: hidden;
   touch-action: pan-y;
   cursor: grab;
+  /* background-color: yellow; */
 }
 .feature__viewport.is-dragging {
   cursor: grabbing;
@@ -354,6 +362,7 @@
 }
 .feature__slide {
   flex: 0 0 min(860px, 86vw);
+  /* background-color: aqua; */
 }
 .feature__main {
   position: relative;
@@ -373,9 +382,9 @@
   transition: transform 1.2s cubic-bezier(0.2, 0.7, 0.2, 1);
 }
 @media (hover: hover) {
-.feature__slide:hover .feature__main > div {
-  transform: scale(1.04);
-}
+  .feature__slide:hover .feature__main > div {
+    transform: scale(1.04);
+  }
 }
 
 .feature__caption {
@@ -415,7 +424,7 @@
 
 .feature__controls {
   width: min(1680px, 86vw);
-  margin: clamp(36px, 4vw, 56px) auto 0;
+  margin: clamp(0px, 5vw, 56px) auto 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -634,9 +643,9 @@
   transition: transform 1s cubic-bezier(0.2, 0.7, 0.2, 1);
 }
 @media (hover: hover) {
-.news-card:hover .news-card__img > div {
-  transform: scale(1.05);
-}
+  .news-card:hover .news-card__img > div {
+    transform: scale(1.05);
+  }
 }
 .news-card__meta {
   display: flex;
@@ -691,16 +700,16 @@
   transition: text-decoration 0.2s;
 }
 @media (hover: hover) {
-.news-card:hover .news-card__title {
-  text-decoration: underline;
-  text-decoration-thickness: 2px;
-  text-underline-offset: 4px;
-}
+  .news-card:hover .news-card__title {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 4px;
+  }
 }
 @media (hover: hover) {
-.hiw-grid .news-card:hover .news-card__title {
-  text-decoration: none;
-}
+  .hiw-grid .news-card:hover .news-card__title {
+    text-decoration: none;
+  }
 }
 .news-card__date {
   font-size: var(--text-12);
@@ -750,10 +759,10 @@
   border: 1px solid var(--text-white);
 }
 @media (hover: hover) {
-.cta-dark .btn:hover {
-  background: var(--bg-white);
-  color: var(--accent-gray-2);
-}
+  .cta-dark .btn:hover {
+    background: var(--bg-white);
+    color: var(--accent-gray-2);
+  }
 }
 
 /* ============================================================
@@ -782,9 +791,9 @@
   transition: transform 0.9s ease;
 }
 @media (hover: hover) {
-.follow-card:hover > div {
-  transform: scale(1.08);
-}
+  .follow-card:hover > div {
+    transform: scale(1.08);
+  }
 }
 .follow-card::after {
   content: "";
@@ -795,9 +804,9 @@
   transition: 0.4s;
 }
 @media (hover: hover) {
-.follow-card:hover::after {
-  opacity: 1;
-}
+  .follow-card:hover::after {
+    opacity: 1;
+  }
 }
 .follow-card span {
   position: absolute;
@@ -812,10 +821,10 @@
   transition: 0.4s;
 }
 @media (hover: hover) {
-.follow-card:hover span {
-  opacity: 1;
-  transform: none;
-}
+  .follow-card:hover span {
+    opacity: 1;
+    transform: none;
+  }
 }
 
 /* ============================================================
@@ -871,9 +880,9 @@
   flex-shrink: 0;
 }
 @media (hover: hover) {
-.acc-detail-link:hover {
-  opacity: 1;
-}
+  .acc-detail-link:hover {
+    opacity: 1;
+  }
 }
 
 /* ============================================================
@@ -911,11 +920,11 @@
     box-shadow 0.42s ease;
 }
 @media (hover: hover) {
-.treat-card:hover {
-  transform: scale(1.055);
-  z-index: 3;
-  box-shadow: 0 28px 70px rgba(0, 0, 0, 0.5);
-}
+  .treat-card:hover {
+    transform: scale(1.055);
+    z-index: 3;
+    box-shadow: 0 28px 70px rgba(0, 0, 0, 0.5);
+  }
 }
 .treat-card__bg {
   position: absolute;
@@ -928,10 +937,10 @@
   filter: brightness(0.58);
 }
 @media (hover: hover) {
-.treat-card:hover .treat-card__bg {
-  filter: brightness(0.82);
-  transform: scale(1.04);
-}
+  .treat-card:hover .treat-card__bg {
+    filter: brightness(0.82);
+    transform: scale(1.04);
+  }
 }
 .treat-card__overlay {
   position: absolute;
@@ -940,9 +949,9 @@
   transition: opacity 0.42s ease;
 }
 @media (hover: hover) {
-.treat-card:hover .treat-card__overlay {
-  opacity: 0.65;
-}
+  .treat-card:hover .treat-card__overlay {
+    opacity: 0.65;
+  }
 }
 .treat-card__body {
   position: absolute;
@@ -955,9 +964,9 @@
   transition: transform 0.42s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 @media (hover: hover) {
-.treat-card:hover .treat-card__body {
-  transform: translateY(-4px);
-}
+  .treat-card:hover .treat-card__body {
+    transform: translateY(-4px);
+  }
 }
 .treat-card__en {
   display: block;
@@ -971,9 +980,9 @@
   transition: opacity 0.3s ease;
 }
 @media (hover: hover) {
-.treat-card:hover .treat-card__en {
-  opacity: 1;
-}
+  .treat-card:hover .treat-card__en {
+    opacity: 1;
+  }
 }
 .treat-card__title {
   font-size: var(--text-25);
@@ -995,11 +1004,11 @@
     margin-bottom 0.35s ease;
 }
 @media (hover: hover) {
-.treat-card:hover .treat-card__desc {
-  opacity: 0.9;
-  max-height: 80px;
-  margin-bottom: var(--space-12);
-}
+  .treat-card:hover .treat-card__desc {
+    opacity: 0.9;
+    max-height: 80px;
+    margin-bottom: var(--space-12);
+  }
 }
 .treat-card__link {
   font-size: var(--text-11);
@@ -1021,15 +1030,15 @@
   transition: transform 0.3s ease;
 }
 @media (hover: hover) {
-.treat-card:hover .treat-card__link {
-  opacity: 1;
-  border-color: rgba(255, 255, 255, 0.85);
-}
+  .treat-card:hover .treat-card__link {
+    opacity: 1;
+    border-color: rgba(255, 255, 255, 0.85);
+  }
 }
 @media (hover: hover) {
-.treat-card:hover .treat-card__link::after {
-  transform: translateX(4px);
-}
+  .treat-card:hover .treat-card__link::after {
+    transform: translateX(4px);
+  }
 }
 .treat-cta {
   text-align: center;
@@ -1478,10 +1487,10 @@
     height: 14px;
   }
   @media (hover: hover) {
-.hero__scroll:hover {
-    color: rgba(255, 255, 255, 1);
+    .hero__scroll:hover {
+      color: rgba(255, 255, 255, 1);
+    }
   }
-}
 
   /* Mobile bottom bar */
   .mobile-bar {
@@ -1532,11 +1541,11 @@
     text-decoration: none;
   }
   @media (hover: hover) {
-.mbar-btn:hover {
-    color: var(--text-white);
+    .mbar-btn:hover {
+      color: var(--text-white);
+    }
   }
-}
-.mbar-btn.is-active {
+  .mbar-btn.is-active {
     color: var(--text-white);
   }
   .mbar-btn--cta {
@@ -1627,10 +1636,10 @@
     flex-shrink: 0;
   }
   @media (hover: hover) {
-.lang-sheet__opt:hover {
-    background: var(--surface-gray-1);
+    .lang-sheet__opt:hover {
+      background: var(--surface-gray-1);
+    }
   }
-}
   .lang-sheet__opt.is-active {
     font-weight: 500;
     color: var(--text-gray-6);
@@ -1657,6 +1666,9 @@
   .feature__caption {
     grid-template-columns: 1fr;
     gap: var(--space-24);
+  }
+  .feature__controls {
+    margin-top: 0px;
   }
 
   /* Section intro responsive */
