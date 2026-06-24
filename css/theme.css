@@ -24,6 +24,9 @@
   /* ── Brown Scale ── */
   --brown-50: #f7f4f2; /* 웜 서피스 (surface-gray-3) */
 
+  /* ── 원색 블루 ── */
+  --blue-pure: #0000ff;
+
   /* ── Blue Scale (#1e49ba 기준) ── */
   --blue-100: #eaedf5;
   --blue-300: #869fdf;
@@ -149,6 +152,7 @@
   --text-gray-6: var(--gray-900); /* 헤딩·강조 제목 */
   --text-gray-7: var(--gray-950); /* 최강 강조 (모바일 헤더, login 제목) */
   --text-blue: var(--blue-500); /* 강조 */
+  --text-chip: var(--blue-500);
   --text-white: var(--white); /* 다크/컬러 배경 위 흰색 */
   --text-caption: var(--blue-500);
   --text-caption2: var(--gray-500); /* 캡션·플로어 레이블 (골드→그레이) */
