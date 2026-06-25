@@ -441,18 +441,41 @@
     });
   });
 
-  /* ---------- Mobile header: My Page button → login modal ---------- */
-  document.querySelectorAll(".header-mypage-btn").forEach(function (btn) {
-    btn.addEventListener("click", function (e) {
-      e.preventDefault();
-      var modal = document.getElementById("loginModal");
-      if (modal) {
-        modal.classList.add("is-open");
-        modal.setAttribute("aria-hidden", "false");
-        document.body.style.overflow = "hidden";
-      }
+  /* ---------- Login modal: 모든 트리거 통합 (util-bar, mobile, GNB) ---------- */
+  (function initLoginModal() {
+    var modal    = document.getElementById("loginModal");
+    var closeEl  = document.getElementById("loginClose");
+    var backdrop = document.getElementById("loginBackdrop");
+    if (!modal) return;
+
+    function openLoginModal() {
+      modal.classList.add("is-open");
+      modal.setAttribute("aria-hidden", "false");
+      document.body.style.overflow = "hidden";
+    }
+    function closeLoginModal() {
+      modal.classList.remove("is-open");
+      modal.setAttribute("aria-hidden", "true");
+      document.body.style.overflow = "";
+    }
+
+    // 트리거: util-bar 사람 아이콘(loginTrigger), 모바일 헤더 버튼, GNB 로그인 링크
+    var triggerIds = ["loginTrigger"];
+    triggerIds.forEach(function (id) {
+      var el = document.getElementById(id);
+      if (el) el.addEventListener("click", function (e) { e.preventDefault(); openLoginModal(); });
     });
-  });
+    document.querySelectorAll(".header-mypage-btn, .gnb-login-btn").forEach(function (el) {
+      el.addEventListener("click", function (e) { e.preventDefault(); openLoginModal(); });
+    });
+
+    if (closeEl)  closeEl.addEventListener("click", closeLoginModal);
+    if (backdrop) backdrop.addEventListener("click", closeLoginModal);
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && modal.classList.contains("is-open")) closeLoginModal();
+    });
+
+  })();
 
   /* ---------- Mobile bottom bar: active state ---------- */
   const mbarBtns = document.querySelectorAll(".mobile-bar .mbar-btn");

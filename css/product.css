@@ -1,5 +1,3 @@
-
-
 /* header: header--solid (common.css) */
 .gnb {
   display: none;
@@ -34,9 +32,9 @@
   transition: color 0.15s;
 }
 @media (hover: hover) {
-.pd-back-btn:hover {
-  color: var(--text-gray-7);
-}
+  .pd-back-btn:hover {
+    color: var(--text-gray-7);
+  }
 }
 
 /* ── Main product section ── */
@@ -96,9 +94,9 @@
   transition: opacity 0.15s;
 }
 @media (hover: hover) {
-.pd-rec-item:hover {
-  opacity: 0.8;
-}
+  .pd-rec-item:hover {
+    opacity: 0.8;
+  }
 }
 .pd-rec-item__img-wrap {
   width: 100%;
@@ -110,9 +108,9 @@
   transition: border-color 0.15s;
 }
 @media (hover: hover) {
-.pd-rec-item:hover .pd-rec-item__img-wrap {
-  border-color: var(--text-caption);
-}
+  .pd-rec-item:hover .pd-rec-item__img-wrap {
+    border-color: var(--text-caption);
+  }
 }
 .pd-rec-item__img {
   width: 100%;
@@ -161,9 +159,9 @@
   z-index: 4;
 }
 @media (hover: hover) {
-.pd-gallery__arrow:hover {
-  background: var(--bg-white);
-}
+  .pd-gallery__arrow:hover {
+    background: var(--bg-white);
+  }
 }
 .pd-gallery__arrow--prev {
   left: var(--space-16);
@@ -240,9 +238,9 @@
   transition: border-color 0.15s;
 }
 @media (hover: hover) {
-.pd-gallery__thumb:hover {
-  border-color: rgba(255, 255, 255, 0.85);
-}
+  .pd-gallery__thumb:hover {
+    border-color: rgba(255, 255, 255, 0.85);
+  }
 }
 .pd-gallery__thumb.is-active {
   border-color: #fff;
@@ -440,10 +438,10 @@
   justify-content: center;
 }
 @media (hover: hover) {
-.pd-qty-btn:hover {
-  background: var(--surface-gray-1);
-  color: var(--text-gray-7);
-}
+  .pd-qty-btn:hover {
+    background: var(--surface-gray-1);
+    color: var(--text-gray-7);
+  }
 }
 .pd-qty-val {
   min-width: var(--space-48);
@@ -474,9 +472,9 @@
   letter-spacing: var(--tracking-tight);
 }
 @media (hover: hover) {
-.pd-btn:hover {
-  opacity: 0.88;
-}
+  .pd-btn:hover {
+    opacity: 0.88;
+  }
 }
 .pd-btn:active {
   transform: scale(0.98);
@@ -528,7 +526,7 @@
 }
 .pd-specs-table td {
   color: var(--text-gray-6);
-  font-weight: 400;
+  font-weight: 600;
 }
 .pd-specs-table tr:last-child th,
 .pd-specs-table tr:last-child td {
@@ -588,25 +586,40 @@
   max-width: 520px;
   margin: 0 auto;
 }
-
 .pd-detail-features {
   background: var(--bg-white);
   padding: var(--space-40);
   border-top: 1px solid var(--border-gray-1);
 }
-
+.pd-feat-title {
+  color: var(--text-gray-6);
+  font-size: var(--text-15);
+  font-weight: 600;
+}
+.pd-feat-desc {
+  color: var(--text-gray-6);
+  font-size: var(--text-15);
+  font-weight: 400;
+}
 .pd-feat-item {
   display: flex;
   align-items: center;
-  gap: var(--space-12);
+  gap: var(--space-36);
   background: #fff;
   border: none;
-  border-top: 1px solid var(--border-gray-1);
+  border-top: 2px solid var(--border-gray-1);
   border-radius: 0;
   padding: var(--space-16) var(--space-4);
 }
 .pd-feat-item:last-child {
-  border-bottom: 1px solid var(--border-gray-1);
+  border-bottom: 2px solid var(--border-gray-1);
+}
+.pd-feat-label {
+  display: flex;
+  align-items: center;
+  gap: var(--space-12);
+  min-width: 180px;
+  flex-shrink: 0;
 }
 .pd-feat-icon {
   color: var(--text-caption);
@@ -617,24 +630,29 @@
   background: var(--surface-gray-1);
   padding: var(--space-40);
 }
-
+.pd-detail-howto__title {
+  font-size: 28px;
+  color: var(--text-gray-6);
+}
 .pd-detail-howto__steps {
   list-style: none;
   counter-reset: step;
-  max-width: 500px;
+  /* max-width: 500px; */
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   gap: var(--space-14);
+  padding-top: 24px;
 }
 .pd-detail-howto__steps li {
   counter-increment: step;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: var(--space-14);
-  font-size: var(--text-15);
+  font-size: var(--text-16);
   color: var(--text-gray-4);
   line-height: 1.6;
+  font-weight: 500;
 }
 .pd-detail-howto__steps li::before {
   content: counter(step);
@@ -643,7 +661,7 @@
   border-radius: 50%;
   background: var(--text-caption);
   color: var(--text-white);
-  font-size: var(--text-12);
+  font-size: var(--text-14);
   font-weight: 700;
   display: flex;
   align-items: center;

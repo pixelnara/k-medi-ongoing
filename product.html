@@ -707,8 +707,9 @@
     { icon: '🔬', title: '임상 테스트', desc: '피부과 전문의 검증 완료' },
   ];
   var featureItems = features.map(function(f) {
-    return '<div class="pd-feat-item"><span class="pd-feat-icon">' + f.icon + '</span>' +
-           '<strong class="pd-feat-title">' + f.title + '</strong>' +
+    return '<div class="pd-feat-item">' +
+           '<span class="pd-feat-label"><span class="pd-feat-icon">' + f.icon + '</span>' +
+           '<strong class="pd-feat-title">' + f.title + '</strong></span>' +
            '<p class="pd-feat-desc">' + f.desc + '</p></div>';
   }).join('');
 

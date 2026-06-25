@@ -656,7 +656,7 @@
 .pss-section-title {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: space-between;
   gap: var(--space-8);
   font-size: var(--text-20);
   font-weight: 700;

@@ -751,7 +751,8 @@
   goTo(isNaN(initIdx) ? 0 : Math.max(0, Math.min(6, initIdx)));
 
   // 히어로 "시술 둘러보기" 버튼
-  document.getElementById('heroScrollBtn').addEventListener('click', function () {
+  var heroScrollBtn = document.getElementById('heroScrollBtn');
+  if (heroScrollBtn) heroScrollBtn.addEventListener('click', function () {
     document.getElementById('procFilter').scrollIntoView({ behavior: 'smooth' });
   });
 })();
