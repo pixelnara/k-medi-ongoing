@@ -719,7 +719,8 @@ image-slot#cert-sgi {
 }
 /* ──────────── → components/header.css (GNB Overlay) ──────────── */
 
-REVEAL ON SCROLL ============================================================ */ [data-reveal] {
+/* REVEAL ON SCROLL ============================================================ */
+[data-reveal] {
   opacity: 0;
   transform: translateY(34px);
   transition:
