@@ -13,8 +13,7 @@
   /* 영문 전용: Optima(Mac) → Marcellus → Cormorant Garamond → Candara(Win) */
   --font-en: Optima, Marcellus, "Cormorant Garamond", Candara, sans-serif;
 
-  /* 국문/기본: Pretendard Variable(CDN) → 시스템 폰트 */
+  /* 국문/기본: Pretendard Variable → Pretendard(서브셋 폴백) → 시스템 폰트 */
   --font-sans:
-    "Pretendard Variable", -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI",
-    sans-serif;
+    "Pretendard Variable", "Pretendard", -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
 }
