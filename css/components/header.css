@@ -254,7 +254,7 @@
   height: var(--header-h);
 }
 .brand {
-  font-family: var(--font-sans);
+  font-family: var(--font-en);
   font-size: var(--text-29);
   font-weight: 600;
   letter-spacing: var(--tracking-normal);
@@ -263,7 +263,7 @@
 }
 .brand small {
   display: block;
-  font-family: var(--font-sans);
+  font-family: var(--font-en);
   font-size: var(--text-10);
   font-weight: 700;
   letter-spacing: var(--tracking-wide);

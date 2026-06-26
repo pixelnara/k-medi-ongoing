@@ -43,7 +43,7 @@ body {
 }
 /* Eyebrow / section label — the ONLY place --caption is used */
 .eyebrow {
-  font-family: var(--font-sans);
+  font-family: var(--font-en);
   color: var(--text-caption);
   font-size: var(--text-19);
   font-weight: 600;

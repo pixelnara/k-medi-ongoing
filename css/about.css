@@ -62,7 +62,7 @@
   padding: clamp(36px, 4.5vw, 56px) clamp(28px, 3.5vw, 44px);
 }
 .step__num {
-  font-family: var(--font-sans);
+  font-family: var(--font-en);
   font-size: clamp(42px, 4.5vw, 66px);
   font-weight: 700;
   color: var(--text-caption);
@@ -238,7 +238,7 @@
   border-bottom: none;
 }
 .stat-row__num {
-  font-family: var(--font-sans);
+  font-family: var(--font-en);
   font-size: clamp(30px, 3.2vw, 48px);
   font-weight: 700;
   color: var(--text-blue);

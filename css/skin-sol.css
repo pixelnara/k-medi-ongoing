@@ -239,7 +239,7 @@
   height: 24px;
 }
 .pss-category__num {
-  font-family: var(--font-sans);
+  font-family: var(--font-en);
   font-size: var(--text-14);
   font-weight: 700;
   letter-spacing: var(--tracking-normal);
@@ -500,7 +500,7 @@
   margin-bottom: var(--space-16);
 }
 .pss-result__code {
-  font-family: var(--font-sans);
+  font-family: var(--font-en);
   font-size: clamp(52px, 8vw, 88px);
   font-weight: 700;
   color: var(--text-gray-6);

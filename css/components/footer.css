@@ -59,7 +59,7 @@
 }
 .footer__brand {
   display: block;
-  font-family: var(--font-sans);
+  font-family: var(--font-en);
   font-size: var(--text-32);
   color: var(--text-white);
   font-weight: 600;
@@ -74,7 +74,7 @@
 .footer__brand small {
   display: block;
   margin-top: var(--space-0);
-  font-family: var(--font-sans);
+  font-family: var(--font-en);
   font-weight: 700;
   font-size: var(--text-11);
   letter-spacing: var(--tracking-wide);
