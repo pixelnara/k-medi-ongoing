@@ -51,6 +51,7 @@
 .tv-card__title {
   font-size: var(--text-17);
   font-weight: 700;
+  letter-spacing: var(--tracking-tight);
   color: var(--text-gray-6);
   margin-bottom: var(--space-8);
   line-height: 1.3;

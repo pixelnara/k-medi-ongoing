@@ -350,12 +350,14 @@ figure.art-img--center img {
 .info-dt {
   font-size: var(--text-18);
   font-weight: 700;
+  letter-spacing: var(--tracking-tight);
   color: var(--text-gray-6);
   min-width: 80px;
   flex-shrink: 0;
 }
 .info-dd {
   font-size: var(--text-18);
+  letter-spacing: var(--tracking-tight);
   color: var(--text-gray-3);
   line-height: 1.65;
   flex: 1;
@@ -691,12 +693,14 @@ figure.art-img--center img {
 .rpost-card__title {
   font-size: var(--type-h5);
   font-weight: 700;
+  letter-spacing: var(--tracking-tight);
   color: var(--text-gray-6);
   line-height: 1.4;
   margin-bottom: var(--space-6);
 }
 .rpost-card__sub {
   font-size: var(--text-17);
+  letter-spacing: var(--tracking-tight);
   color: var(--text-gray-5);
   line-height: 1.5;
   overflow: hidden;

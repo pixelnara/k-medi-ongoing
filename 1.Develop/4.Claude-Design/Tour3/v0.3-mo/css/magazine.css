@@ -360,6 +360,7 @@
 }
 .art-header__summary {
   font-size: clamp(16px, 1.6vw, 20px);
+  letter-spacing: var(--tracking-tight);
   color: var(--text-gray-3);
   line-height: 1.7;
   max-width: 680px;
@@ -418,6 +419,7 @@
 }
 .art-body p {
   font-size: clamp(15px, 1.3vw, 17px);
+  letter-spacing: var(--tracking-tight);
   color: var(--text-gray-3);
   line-height: 1.85;
   margin-bottom: var(--space-20);
@@ -801,6 +803,7 @@
 /* Body paragraphs */
 .art2-body p {
   font-size: clamp(15px, 1.3vw, 17px);
+  letter-spacing: var(--tracking-tight);
   color: var(--text-gray-3);
   line-height: 1.9;
   margin-bottom: var(--space-20);

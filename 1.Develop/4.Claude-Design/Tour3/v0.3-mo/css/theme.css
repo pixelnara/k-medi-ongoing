@@ -84,7 +84,6 @@
   --text-104: clamp(44px, 6.6vw, 104px);
 
   /* ─── Primitive: Letter Spacing ─── */
-
   --tracking-tightest: -0.03em;
   --tracking-tighter: -0.02em;
   --tracking-tight: -0.01em;
@@ -262,8 +261,8 @@
 
   /* ─── JS Interaction Tokens (reference only — unitless, read by app.js) ─── */
   /* JS usage: window.KMT.SCROLL.* / window.KMT.HERO.*                     */
-  --scroll-header-solid: 60;    /* scrollY > N → 헤더 불투명 */
-  --scroll-header-compact: 80;  /* scrollY 하강 시 헤더 컴팩트 */
-  --scroll-topbtn: 400;         /* scrollY > N → top 버튼 표시 */
-  --hero-interval: 6000;        /* 히어로 슬라이더 자동재생 (ms) */
+  --scroll-header-solid: 60; /* scrollY > N → 헤더 불투명 */
+  --scroll-header-compact: 80; /* scrollY 하강 시 헤더 컴팩트 */
+  --scroll-topbtn: 400; /* scrollY > N → top 버튼 표시 */
+  --hero-interval: 6000; /* 히어로 슬라이더 자동재생 (ms) */
 }

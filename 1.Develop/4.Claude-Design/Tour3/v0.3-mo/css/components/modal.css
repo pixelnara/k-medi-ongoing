@@ -65,6 +65,7 @@
 .login-modal__title {
   font-size: var(--text-19);
   font-weight: 700;
+  letter-spacing: var(--tracking-tight);
   color: var(--text-gray-7);
   margin-bottom: var(--space-4);
   text-align: center;
@@ -341,6 +342,7 @@ input[type="password"].login-modal__input {
 .proc-sheet__title {
   font-size: var(--text-18);
   font-weight: 700;
+  letter-spacing: var(--tracking-tight);
   color: var(--text-gray-6);
 }
 .proc-sheet__list {

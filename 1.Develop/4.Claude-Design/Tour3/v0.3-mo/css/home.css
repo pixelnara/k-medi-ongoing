@@ -69,7 +69,7 @@
   font-weight: 650;
   font-size: var(--text-104);
   line-height: 1.2;
-  letter-spacing: var(--tracking-tight);
+  letter-spacing: var(--tracking-tightest);
   max-width: 20ch;
   color: var(--text-white);
   opacity: 0;
@@ -83,6 +83,7 @@
   font-weight: 400;
   max-width: 80ch;
   line-height: 1.65;
+  letter-spacing: var(--tracking-tighter);
   color: rgba(255, 255, 255, 0.7);
   opacity: 0;
   transform: translateY(20px);
@@ -505,6 +506,7 @@
   color: var(--text-gray-3);
   font-size: var(--type-body-lg);
   line-height: 1.95;
+  letter-spacing: var(--tracking-tight);
   max-width: 46ch;
   margin-bottom: 2.4rem;
 }
@@ -840,6 +842,7 @@
   font-size: clamp(14px, 1.35vw, 23px);
   font-weight: 600;
   line-height: 1.45;
+  letter-spacing: var(--tracking-tight);
   margin-top: var(--space-10);
   display: -webkit-box;
   -webkit-line-clamp: 2;
@@ -898,6 +901,7 @@
   font-size: clamp(16px, 1.8vw, 24px);
   font-weight: 400;
   line-height: 1.8;
+  letter-spacing: var(--tracking-tight);
   color: rgba(255, 255, 255, 0.85);
   max-width: 54ch;
   margin-bottom: var(--space-40);
@@ -992,6 +996,7 @@
 .acc-head {
   font-size: clamp(18px, 1.6vw, 22px);
   font-weight: 530;
+  letter-spacing: var(--tracking-tight);
   padding: var(--space-24) 30px;
 }
 .acc-icon {
@@ -1034,9 +1039,11 @@
   .acc-em {
     font-size: var(--text-17);
     font-weight: 600;
+    letter-spacing: var(--tracking-tight);
   }
   .acc-desc {
     font-size: var(--text-18);
+    letter-spacing: var(--tracking-tight);
   }
 }
 .acc-detail-link {
@@ -1412,10 +1419,10 @@
 .news-card__desc {
   color: var(--text-gray-4);
   font-size: var(--text-15);
-  font-weight: 480;
+  font-weight: 500;
   line-height: 1.8;
   margin-top: var(--space-12);
-  letter-spacing: var(--tracking-tight);
+  letter-spacing: var(--tracking-tighter);
 }
 /* Mobile: icon+step list */
 .hiw__grid {
@@ -1476,6 +1483,7 @@
   font-size: var(--type-body);
   font-weight: 500;
   line-height: 1.85;
+  letter-spacing: var(--tracking-tight);
   max-width: 45ch;
 }
 @media (max-width: 860px) {
@@ -1704,7 +1712,7 @@
     font-size: clamp(29px, 5.5vw, 44px);
     word-spacing: 0.05em;
     line-height: 1.2;
-    letter-spacing: var(--tracking-tight);
+    letter-spacing: var(--tracking-tighter);
     text-align: center;
     font-weight: 700;
     padding-bottom: 0.3em;

@@ -382,6 +382,7 @@
 .pd-discount {
   font-size: var(--text-24);
   font-weight: 800;
+  letter-spacing: var(--tracking-tight);
   color: var(--cosm-discount);
 }
 .pd-price {
@@ -500,6 +501,7 @@
 .pd-specs-heading {
   font-size: var(--text-18);
   font-weight: 700;
+  letter-spacing: var(--tracking-tight);
   color: var(--text-gray-7);
   margin-bottom: var(--space-20);
 }
@@ -539,6 +541,7 @@
 .pd-detail-heading {
   font-size: var(--text-18);
   font-weight: 700;
+  letter-spacing: var(--tracking-tight);
   color: var(--text-gray-7);
   margin-bottom: var(--space-24);
 }
@@ -630,6 +633,7 @@
 }
 .pd-detail-howto__title {
   font-size: 28px;
+  letter-spacing: var(--tracking-tight);
   color: var(--text-gray-6);
 }
 .pd-detail-howto__steps {
