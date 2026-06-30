@@ -84,6 +84,39 @@
     });
   });
 
+  /* ── 검색 아이콘 토글 ── */
+  document.querySelectorAll('[data-search-toggle]').forEach(function (btn) {
+    btn.addEventListener('click', function (e) {
+      e.stopPropagation();
+      var box = document.querySelector('[data-search-box="' + btn.dataset.searchToggle + '"]');
+      if (!box) return;
+      if (box.hasAttribute('hidden')) {
+        box.removeAttribute('hidden');
+        btn.setAttribute('aria-expanded', 'true');
+        var inp = box.querySelector('.tv-search__input');
+        if (inp) inp.focus();
+      } else {
+        box.setAttribute('hidden', '');
+        btn.setAttribute('aria-expanded', 'false');
+      }
+    });
+  });
+
+  /* ── 컬럼(그리드) 토글 ── */
+  document.querySelectorAll('[data-cols]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var key = btn.dataset.cols;
+      document.querySelectorAll('[data-cols="' + key + '"]').forEach(function (b) {
+        b.classList.toggle('is-active', b === btn);
+      });
+      var grid = document.getElementById('grid-' + key);
+      if (grid) {
+        grid.classList.remove('tv-grid--c1', 'tv-grid--c2');
+        grid.classList.add('tv-grid--c' + btn.dataset.val);
+      }
+    });
+  });
+
   /* ── 소팅 ── */
   var sortState = { hotel: 'recommended', shopping: 'recommended' };
 
