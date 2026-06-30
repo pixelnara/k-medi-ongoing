@@ -109,6 +109,7 @@
   };
   document.querySelectorAll('.tv-col-toggle').forEach(function (btn) {
     btn.addEventListener('click', function () {
+
       var key = btn.dataset.cols;
       var next = btn.dataset.val === '1' ? '2' : '1';
       btn.dataset.val = next;
