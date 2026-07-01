@@ -205,6 +205,7 @@
   const slides = [...document.querySelectorAll(".hero__slide")].filter((s) => getComputedStyle(s).display !== "none");
   const counterCur = document.querySelector(".hero__counter-cur");
   const counterTot = document.querySelector(".hero__counter-tot");
+  const heroDots = document.querySelector(".hero__dots");
   const heroSection = document.querySelector(".hero");
   const heroTitle = document.querySelector(".hero__title");
   const heroDesc = document.querySelector(".hero__desc");
@@ -216,6 +217,7 @@
     cur = (i + slides.length) % slides.length;
     slides.forEach((s, k) => s.classList.toggle("is-active", k === cur));
     if (counterCur) counterCur.textContent = String(cur + 1).padStart(2, "0");
+    if (heroDots) [...heroDots.children].forEach((d, k) => d.classList.toggle("is-active", k === cur));
     const slide = slides[cur];
     if (heroTitle) heroTitle.innerHTML = slide.dataset.title || defaultTitle;
     if (heroDesc) heroDesc.innerHTML = slide.dataset.desc || defaultDesc;
@@ -229,6 +231,11 @@
   }
   if (slides.length) {
     if (counterTot) counterTot.textContent = String(slides.length).padStart(2, "0");
+    if (heroDots) slides.forEach(() => {
+      const dot = document.createElement("span");
+      dot.className = "hero__dot";
+      heroDots.appendChild(dot);
+    });
     go(0);
     play();
   }

@@ -200,6 +200,20 @@
   opacity: 0.9;
   font-weight: 900;
 }
+.hero__dots {
+  display: none;
+}
+.hero__dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.4);
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+.hero__dot.is-active {
+  background: #fff;
+  transform: scale(1.25);
+}
 
 .hero__scroll {
   display: none;
@@ -1750,16 +1764,13 @@
     display: none;
   }
   .hero__counter {
-    position: static;
-    transform: none;
-    bottom: auto;
-    left: auto;
+    display: none;
+  }
+  .hero__dots {
+    display: flex;
+    gap: 7px;
+    align-items: center;
     margin-top: var(--space-16);
-    background: none;
-    color: var(--text-white);
-    letter-spacing: var(--tracking-open);
-    padding: 0;
-    gap: 1px;
   }
   .hero__counter-sep {
     opacity: 0.5;
