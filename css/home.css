@@ -50,7 +50,7 @@
 }
 @media (max-width: 860px) {
   .hero__slide--first {
-    background-image: url("../assets/img/1-page-home/01_main_banner/peoplel_sea.png");
+    background-image: url("../assets/img/1-page-home/01_main_banner/peoplel_sea_mo.jpg");
     background-position: left bottom;
   }
 }
@@ -110,8 +110,8 @@
 @media (max-width: 860px) {
   .hero__title {
     text-shadow:
-      0 2px 10px rgba(0, 0, 0, 0.7),
-      0 1px 5px rgba(0, 0, 0, 0.2);
+      0 2px 10px rgba(0, 0, 0, 0.2),
+      0 1px 3px rgba(0, 0, 0, 0.3);
   }
 }
 .hero__desc {
