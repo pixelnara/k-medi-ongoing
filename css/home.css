@@ -45,12 +45,12 @@
   }
 }
 .hero__slide--first {
-  background-image: url("../assets/img/1-page-home/01_main_banner/hero-6.png");
+  background-image: url("../assets/img/1-page-home/01_main_banner/hero-12.png");
   background-position: center center;
 }
 @media (max-width: 860px) {
   .hero__slide--first {
-    background-image: url("../assets/img/1-page-home/01_main_banner/hero-6.png");
+    background-image: url("../assets/img/1-page-home/01_main_banner/hero-12.png");
     background-position: center center;
   }
 }
