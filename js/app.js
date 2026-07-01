@@ -23,12 +23,12 @@
     treat: bp("treat", 520),
   };
   const SCROLL = {
-    headerSolid:   tok("--scroll-header-solid", 60),
+    headerSolid: tok("--scroll-header-solid", 60),
     headerCompact: tok("--scroll-header-compact", 80),
-    topBtn:        tok("--scroll-topbtn", 400),
+    topBtn: tok("--scroll-topbtn", 400),
   };
   const HERO = {
-    interval: tok("--hero-interval", 6000),
+    interval: tok("--hero-interval", 10000),
   };
   // 외부(페이지별 스크립트)에서도 공유할 수 있도록 노출
   window.KMT = window.KMT || {};
@@ -505,8 +505,8 @@
 
   /* ---------- Login modal: 모든 트리거 통합 (util-bar, mobile, GNB) ---------- */
   (function initLoginModal() {
-    var modal    = document.getElementById("loginModal");
-    var closeEl  = document.getElementById("loginClose");
+    var modal = document.getElementById("loginModal");
+    var closeEl = document.getElementById("loginClose");
     var backdrop = document.getElementById("loginBackdrop");
     if (!modal) return;
 
@@ -525,18 +525,24 @@
     var triggerIds = ["loginTrigger"];
     triggerIds.forEach(function (id) {
       var el = document.getElementById(id);
-      if (el) el.addEventListener("click", function (e) { e.preventDefault(); openLoginModal(); });
+      if (el)
+        el.addEventListener("click", function (e) {
+          e.preventDefault();
+          openLoginModal();
+        });
     });
     document.querySelectorAll(".header-mypage-btn, .gnb-login-btn").forEach(function (el) {
-      el.addEventListener("click", function (e) { e.preventDefault(); openLoginModal(); });
+      el.addEventListener("click", function (e) {
+        e.preventDefault();
+        openLoginModal();
+      });
     });
 
-    if (closeEl)  closeEl.addEventListener("click", closeLoginModal);
+    if (closeEl) closeEl.addEventListener("click", closeLoginModal);
     if (backdrop) backdrop.addEventListener("click", closeLoginModal);
     document.addEventListener("keydown", function (e) {
       if (e.key === "Escape" && modal.classList.contains("is-open")) closeLoginModal();
     });
-
   })();
 
   /* ---------- Mobile bottom bar: active state ---------- */
@@ -547,7 +553,6 @@
       btn.classList.add("is-active");
     });
   });
-
 
   /* ---------- Footer top button ---------- */
   const footerTopBtn = document.querySelector(".footer__top-btn");
