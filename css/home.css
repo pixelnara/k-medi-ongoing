@@ -45,11 +45,13 @@
   }
 }
 .hero__slide--hanbok {
-  background-image: url("../assets/img/1-page-home/01_main_banner/test-forest.png");
+  background-image: url("../assets/img/1-page-home/01_main_banner/hero-resort-pc.jpg");
+  background-position: center center;
 }
 @media (max-width: 860px) {
   .hero__slide--hanbok {
-    background-image: url("../assets/img/1-page-home/01_main_banner/test-forest.png");
+    background-image: url("../assets/img/1-page-home/01_main_banner/hero-resort-pc.jpg");
+    background-position: center center;
   }
 }
 .hero__slide--hero23 {
@@ -67,7 +69,7 @@
   position: absolute;
   inset: 0;
   z-index: 1;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.1) 20%, rgba(0, 0, 0, 0) %);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.55) 0%, rgba(0, 0, 0, 0.25) 40%, rgba(0, 0, 0, 0) 75%);
 }
 .hero__inner {
   position: relative;
@@ -89,14 +91,14 @@
   letter-spacing: var(--tracking-tightest);
   max-width: 20ch;
   color: var(--text-white);
-  text-shadow: 0 3px 1px rgba(0, 0, 0, 0.35);
+  text-shadow: 0 2px 16px rgba(0, 0, 0, 0.5), 0 1px 3px rgba(0, 0, 0, 0.3);
   opacity: 0;
   transform: translateY(28px);
   animation: rise 1s 0.35s forwards;
 }
 @media (max-width: 860px) {
   .hero__title {
-    text-shadow: 0 2px 1px rgba(0, 0, 0, 0.5);
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.6), 0 1px 3px rgba(0, 0, 0, 0.4);
   }
 }
 .hero__desc {
@@ -1508,7 +1510,7 @@
 }
 @media (max-width: 860px) {
   .hero__overlay {
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.25) 30%, rgba(0, 0, 0, 0) 50%);
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0.3) 40%, rgba(0, 0, 0, 0) 70%);
   }
   /* HIW: 860px 이하에서 모바일 레이아웃으로 전환 */
   .hiw-desktop {
