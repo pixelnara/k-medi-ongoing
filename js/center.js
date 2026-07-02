@@ -3,9 +3,9 @@
 // Inside Hugro Carousel
 (function () {
   var ihcSlides = [
-    { src: "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=1200&q=85", alt: "B1 Premium Massage & Spa" },
-    { src: "https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1200&q=85", alt: "1F Hugro Center" },
-    { src: "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=1200&q=85", alt: "2F Exhibition Gallery" },
+    { src: "assets/img/2-hugro/center-b1.png", alt: "B1 Premium Massage & Spa" },
+    { src: "assets/img/2-hugro/center-1f.png", alt: "1F Hugro Center" },
+    { src: "assets/img/2-hugro/center-2f.png", alt: "2F Exhibition Gallery" },
   ];
   var ihcEl = document.querySelector(".ihc");
   if (!ihcEl) return;
