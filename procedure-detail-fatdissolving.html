@@ -3,28 +3,21 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
-    <title>코스메틱 — KMEDITOUR · 프리미엄 K-뷰티 화장품 | Premium Concierge in Korea</title>
-    <meta name="description" content="KMEDITOUR 코스메틱 — 프리미엄 K-뷰티 화장품. 한국 최고의 스킨케어 제품을 만나보세요. 세럼, 크림, 에센스, 미스트 등 다양한 뷰티 제품을 제공합니다." />
-    <meta name="keywords" content="KMEDITOUR 코스메틱, K-뷰티 화장품, 한국 스킨케어, 보닉스, 프리미엄 화장품, Korean cosmetics, K-beauty skincare" />
+    <title>지방분해 | K-MEDI TOUR</title>
+    <meta name="description" content="지방세포를 선택적으로 파괴하여 자연스러운 윤곽을 완성하는 비수술 미용 시술 — 지방분해 상세 안내" />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://kmeditour.com/cosmetic.html" />
-    <meta property="og:title" content="코스메틱 — KMEDITOUR 프리미엄 K-뷰티" />
-    <meta property="og:description" content="프리미엄 K-뷰티, 한국 화장품의 특별한 가치를 경험해보세요. KMEDITOUR 코스메틱 컬렉션." />
-    <meta property="og:image" content="https://kmeditour.com/assets/og/og-cosmetic.jpg" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
+    <meta property="og:title" content="지방분해 | K-MEDI TOUR" />
+    <meta property="og:description" content="지방세포를 선택적으로 파괴하여 자연스러운 윤곽을 완성하는 비수술 미용 시술" />
+    <meta property="og:image" content="assets/img/2-hugro/treatment-5.png" />
     <meta property="og:locale" content="ko_KR" />
     <meta property="og:site_name" content="KMEDITOUR" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="코스메틱 — KMEDITOUR 프리미엄 K-뷰티" />
-    <meta name="twitter:description" content="프리미엄 K-뷰티, 한국 화장품의 특별한 가치를 경험해보세요." />
-    <meta name="twitter:image" content="https://kmeditour.com/assets/og/og-cosmetic.jpg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preconnect" href="https://unpkg.com" />
     <link rel="stylesheet" href="css/font.css" />
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/theme.css" />
+    <link rel="stylesheet" href="css/components/topbar.css" />
     <link rel="stylesheet" href="css/components/button.css" />
     <link rel="stylesheet" href="css/components/accordion.css" />
     <link rel="stylesheet" href="css/components/modal.css" />
@@ -35,13 +28,24 @@
     <link rel="stylesheet" href="css/components/footer.css" />
     <link rel="stylesheet" href="css/common.css" />
     <link rel="stylesheet" href="css/components/subpage.css" />
-    <link rel="stylesheet" href="css/cosmetic.css" />
+    <link rel="stylesheet" href="css/procedure-detail.css" />
   </head>
   <body>
     <a class="skip-link" href="#main-content">본문으로 이동</a>
 
+    <!-- ============================== MOBILE TOP BAR ============================== -->
+    <div class="topbar">
+      <a href="procedure.html" class="topbar__back" aria-label="뒤로가기">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" width="22" height="22">
+          <polyline points="15 18 9 12 15 6" />
+        </svg>
+      </a>
+      <span class="topbar__title">지방분해</span>
+      <span class="topbar__spacer" aria-hidden="true"></span>
+    </div>
+
     <!-- ============================== HEADER ============================== -->
-    <header class="header header--light">
+    <header class="header">
       <div class="header__util">
         <div class="wrap">
           <div class="util-left">
@@ -154,7 +158,7 @@
             <a href="index.html#why">매거진</a>
           </nav>
           <div class="header__right">
-            <a href="reservation.html" class="btn btn--primary2">상담 예약하기</a>
+            <a href="reservation.html" class="btn btn--primary">상담 예약하기</a>
             <button class="header-mypage-btn header-right--v2" aria-label="마이 페이지">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
                 <circle cx="12" cy="8" r="4" />
@@ -200,7 +204,7 @@
           <div class="gnb-contact-block">
             <div class="gnb-contact-cta">
               <a href="reservation.html" class="gnb-cta-btn gnb-cta-btn--book">상담 예약하기</a>
-              <a href="mailto:contact@kmeditour.com" class="gnb-cta-btn gnb-cta-btn--mail"> contact@kmeditour.com </a>
+              <a href="mailto:contact@kmeditour.com" class="gnb-cta-btn gnb-cta-btn--mail">contact@kmeditour.com</a>
             </div>
           </div>
           <div class="gnb-lang-tabs">
@@ -211,8 +215,6 @@
             <button class="gnb-lang-tab" data-lang="VN"><img src="assets/flag/flag_vietnam.svg" alt="VN" class="gnb-lang-flag" /><span class="gnb-lang-code">VN</span></button>
           </div>
         </div>
-
-        <!-- 1행: 서비스, 스페이스, 쇼핑, 소식 -->
         <div class="gnb-cols">
           <div class="gnb-col gnb-col--mobile-only">
             <h4 data-en="About">
@@ -256,15 +258,17 @@
                       </button>
                     </div>
                     <ul class="gnb-sub-list">
-                      <li><a href="procedure.html">전체</a></li>
-                      <li><a href="#">필러</a></li>
-                      <li><a href="#">보톡스</a></li>
-                      <li><a href="#">실리프팅</a></li>
-                      <li><a href="#">레이저</a></li>
-                      <li><a href="#">스킨 부스터</a></li>
-                      <li><a href="#">피부관리</a></li>
-                      <li><a href="#">지방분해</a></li>
-                    </ul>
+                    <li><a href="procedure.html">전체</a></li>
+                    <li><a href="procedure-detail-filler.html">필러</a></li>
+                    <li><a href="procedure-detail-botox.html">보톡스</a></li>
+                    <li><a href="procedure-detail-threadlifting.html">실리프팅</a></li>
+                    <li><a href="procedure-detail-laser.html">레이저</a></li>
+                    <li><a href="procedure-detail-skinbooster.html">스킨부스터</a></li>
+                    <li><a href="procedure-detail-skincare.html">피부관리</a></li>
+                    <li>
+                      <a href="procedure-detail-fatdissolving.html" class="is-active">지방분해</a>
+                    </li>
+                  </ul>
                   </li>
                 </ul>
               </li>
@@ -353,7 +357,7 @@
       </div>
     </div>
 
-    <!-- 시술 팝업 시트 (모바일) -->
+    <!-- 시술 팝업 시트 -->
     <div class="proc-sheet" id="procSheet" aria-hidden="true">
       <div class="proc-sheet__bar">
         <span class="proc-sheet__title">시술 종류</span>
@@ -365,13 +369,13 @@
       </div>
       <ul class="proc-sheet__list">
         <li><a href="procedure.html">전체</a></li>
-        <li><a href="#">필러</a></li>
-        <li><a href="#">보톡스</a></li>
-        <li><a href="#">실리프팅</a></li>
-        <li><a href="#">레이저</a></li>
-        <li><a href="#">스킨 부스터</a></li>
-        <li><a href="#">피부관리</a></li>
-        <li><a href="#">지방분해</a></li>
+        <li><a href="procedure-detail-filler.html">필러</a></li>
+        <li><a href="procedure-detail-botox.html">보톡스</a></li>
+        <li><a href="procedure-detail-threadlifting.html">실리프팅</a></li>
+        <li><a href="procedure-detail-laser.html">레이저</a></li>
+        <li><a href="procedure-detail-skinbooster.html">스킨부스터</a></li>
+        <li><a href="procedure-detail-skincare.html">피부관리</a></li>
+        <li><a href="procedure-detail-fatdissolving.html">지방분해</a></li>
       </ul>
       <a href="reservation.html" class="proc-sheet__banner">
         <div class="proc-sheet__banner-inner">
@@ -385,99 +389,395 @@
         </svg>
       </a>
     </div>
+
     <main id="main-content">
-      <!-- ============================== HERO ============================== -->
-      <!-- PAGE HEADER — B형 (심플) -->
-      <div class="page-head-edito page-head-edito--center">
-        <div class="wrap">
-          <div class="page-head-edito__inner">
-            <div>
-              <p class="page-head-edito__eyebrow">Cosmetics</p>
-              <h1 class="page-head-edito__title">코스메틱</h1>
-              <p class="page-head-edito__desc">프리미엄 K-뷰티, 한국 화장품의 특별한 가치를 경험해보세요.</p>
-            </div>
-          </div>
+      <!-- ══════════════════════════════════════════════════════
+     01. HERO — Full-width Image Overlay
+══════════════════════════════════════════════════════ -->
+      <section class="pd-hero" aria-label="지방분해 시술 소개">
+        <img class="pd-hero__img" src="assets/img/2-hugro/treatment-5.png" alt="지방분해 시술" />
+        <div class="pd-hero__overlay" aria-hidden="true"></div>
+        <div class="pd-hero__text">
+          <p class="pd-hero__eyebrow">시술 소개</p>
+          <h1 class="pd-hero__title">지방분해</h1>
+          <p class="pd-hero__sub">지방세포를 선택적으로 파괴하여 자연스러운 윤곽을 완성하는 비수술 미용 시술</p>
         </div>
-      </div>
+      </section>
 
-      <!-- ============================== SHOP ============================== -->
-      <section class="cosm-shop" id="products">
+      <!-- ══════════════════════════════════════════════════════
+     02. QUICK INFO BAR
+══════════════════════════════════════════════════════ -->
+      <!-- ══════════════════════════════════════════════════════
+     03. OVERVIEW
+══════════════════════════════════════════════════════ -->
+      <section class="section pd-overview" aria-label="개요" data-reveal>
         <div class="wrap">
-          <!-- 컨트롤 바 -->
-          <div class="cosm-controls">
-            <div class="cosm-controls__left">
-              <!-- 선택박스 1: 카테고리 필터 -->
-              <div class="cosm-select" id="catSelect">
-                <button class="cosm-select-btn" id="catBtn" aria-expanded="false" aria-haspopup="listbox">
-                  <span class="cosm-select-label" id="catLabel">전체</span>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                    <polyline points="6 9 12 15 18 9" />
-                  </svg>
-                </button>
-                <ul class="cosm-select-dropdown" id="catDropdown" role="listbox" aria-label="카테고리 선택">
-                  <li role="option" data-value="all" class="is-active" aria-selected="true">전체</li>
-                  <li role="option" data-value="화장품" aria-selected="false">화장품</li>
-                  <li role="option" data-value="세럼" aria-selected="false">세럼</li>
-                  <li role="option" data-value="크림" aria-selected="false">크림</li>
-                  <li role="option" data-value="스텝" aria-selected="false">스텝</li>
-                  <li role="option" data-value="미스트" aria-selected="false">미스트</li>
-                  <li role="option" data-value="에센스" aria-selected="false">에센스</li>
-                </ul>
-              </div>
+          <div class="pd-sec-head">
+            <p class="eyebrow">Overview</p>
+            <h2 class="pd-sec-title">개요</h2>
+          </div>
+          <div class="pd-overview__body">
+            <p>
+              지방분해 시술은 특수 약물이나 에너지를 이용해 국소 부위의 지방세포를 선택적으로 파괴하여 자연스러운 바디 윤곽을 완성하는 시술입니다. 파괴된 지방세포는 체내 대사 과정을 통해 서서히 배출되며, 식습관 관리 없이도 부분적인 라인 개선이 가능합니다.
+            </p>
+          </div>
+          <table class="pd-info__table pd-info__table--inline">
+            <tbody>
+              <tr class="pd-info__row">
+                <th class="pd-info__th" scope="row">
+                  <span class="pd-info__icon-inline" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="16" height="16">
+                      <circle cx="12" cy="12" r="10" />
+                      <polyline points="12 6 12 12 16 14" />
+                    </svg>
+                  </span>
+                  시술 시간
+                </th>
+                <td class="pd-info__td">20~40분</td>
+              </tr>
+              <tr class="pd-info__row">
+                <th class="pd-info__th" scope="row">
+                  <span class="pd-info__icon-inline" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="16" height="16">
+                      <rect x="3" y="4" width="18" height="18" rx="2" />
+                      <line x1="16" y1="2" x2="16" y2="6" />
+                      <line x1="8" y1="2" x2="8" y2="6" />
+                      <line x1="3" y1="10" x2="21" y2="10" />
+                    </svg>
+                  </span>
+                  회복 기간
+                </th>
+                <td class="pd-info__td">2~5일 <span class="pd-info__note">(개인차 있음)</span></td>
+              </tr>
+              <tr class="pd-info__row">
+                <th class="pd-info__th" scope="row">
+                  <span class="pd-info__icon-inline" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="16" height="16">
+                      <polyline points="23 4 23 10 17 10" />
+                      <path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10" />
+                    </svg>
+                  </span>
+                  유지 기간
+                </th>
+                <td class="pd-info__td">반영구적 <span class="pd-info__note">(파괴된 지방세포는 재생되지 않음)</span></td>
+              </tr>
+              <tr class="pd-info__row">
+                <th class="pd-info__th" scope="row">
+                  <span class="pd-info__icon-inline" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="16" height="16">
+                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                      <circle cx="12" cy="10" r="3" />
+                    </svg>
+                  </span>
+                  주요 적용 부위
+                </th>
+                <td class="pd-info__td">턱밑, 볼, 팔, 복부, 허벅지</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
 
-              <span class="cosm-count">총 <strong id="productCount">11</strong>개 상품</span>
-            </div>
-
-            <div class="cosm-controls__right">
-              <!-- 검색 -->
-              <div class="cosm-search" id="cosmSearchWrap">
-                <input type="text" class="cosm-search__input" id="cosmSearchInput" placeholder="상품명 검색" aria-label="상품명 검색" />
-                <button class="cosm-search__btn" id="cosmSearchBtn" aria-label="검색">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18">
-                    <circle cx="11" cy="11" r="7" />
-                    <line x1="21" y1="21" x2="16.65" y2="16.65" />
-                  </svg>
-                </button>
-              </div>
-              <!-- 선택박스 2: 정렬 -->
-              <div class="cosm-select" id="sortSelect">
-                <button class="cosm-select-btn" id="sortBtn" aria-expanded="false" aria-haspopup="listbox">
-                  <span class="cosm-select-label" id="sortLabel">기본 정렬</span>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                    <polyline points="6 9 12 15 18 9" />
-                  </svg>
-                </button>
-                <ul class="cosm-select-dropdown cosm-select-dropdown--right" id="sortDropdown" role="listbox" aria-label="정렬 선택">
-                  <li role="option" data-value="default" class="is-active" aria-selected="true">기본 정렬</li>
-                  <li role="option" data-value="name" aria-selected="false">이름순</li>
-                  <li role="option" data-value="rating" aria-selected="false">평점순</li>
-                  <li role="option" data-value="popularity" aria-selected="false">인기순</li>
-                  <li role="option" data-value="price-low" aria-selected="false">낮은 가격순</li>
-                  <li role="option" data-value="price-high" aria-selected="false">높은 가격순</li>
-                </ul>
-              </div>
-            </div>
+      <!-- ══════════════════════════════════════════════════════
+     04. TREATMENT AREAS
+══════════════════════════════════════════════════════ -->
+      <section class="section pd-areas" aria-label="시술 부위" data-reveal>
+        <div class="wrap">
+          <div class="pd-sec-head">
+            <p class="eyebrow">Treatment Areas</p>
+            <h2 class="pd-sec-title">시술 부위</h2>
+            <p class="pd-areas__current-name" id="areaCurrentName">턱밑</p>
           </div>
 
-          <!-- 상품 그리드 -->
-          <div class="cosm-grid" id="productGrid"></div>
+          <!-- Tabs -->
+          <div class="pd-areas__tabs" role="tablist" aria-label="시술 부위 선택">
+            <button class="chip is-active" data-area="0" role="tab" aria-selected="true" aria-controls="area-panel-0">턱밑</button>
+            <button class="chip" data-area="1" role="tab" aria-selected="false" aria-controls="area-panel-1">볼</button>
+            <button class="chip" data-area="2" role="tab" aria-selected="false" aria-controls="area-panel-2">팔</button>
+            <button class="chip" data-area="3" role="tab" aria-selected="false" aria-controls="area-panel-3">복부</button>
+            <button class="chip" data-area="4" role="tab" aria-selected="false" aria-controls="area-panel-4">허벅지</button>
+          </div>
 
-          <!-- 페이지네이션 -->
-          <div class="cosm-pagination" id="cosmPagination">
-            <button class="cosm-pagi-arrow" id="cosmPrevBtn" aria-label="이전 페이지">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <polyline points="15 18 9 12 15 6" />
-              </svg>
-            </button>
-            <div class="cosm-pagi-nums" id="cosmPagiNums"></div>
-            <button class="cosm-pagi-arrow" id="cosmNextBtn" aria-label="다음 페이지">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <polyline points="9 18 15 12 9 6" />
-              </svg>
-            </button>
+          <!-- 턱밑 -->
+          <div class="pd-area-panel is-active" data-area="0" id="area-panel-0" role="tabpanel">
+            <div class="pd-area-panel__video-wrap">
+              <img class="pd-area-panel__video" src="assets/img/2-hugro/treatment-5.png" alt="턱밑" />
+            </div>
+            <p class="pd-area-panel__caption">턱밑 부위에 맞춘 지방분해 시술입니다.</p>
+          </div>
+
+          <!-- 볼 -->
+          <div class="pd-area-panel" data-area="1" id="area-panel-1" role="tabpanel">
+            <div class="pd-area-panel__video-wrap">
+              <img class="pd-area-panel__video" src="assets/img/2-hugro/treatment-5.png" alt="볼" />
+            </div>
+            <p class="pd-area-panel__caption">볼 부위에 맞춘 지방분해 시술입니다.</p>
+          </div>
+
+          <!-- 팔 -->
+          <div class="pd-area-panel" data-area="2" id="area-panel-2" role="tabpanel">
+            <div class="pd-area-panel__video-wrap">
+              <img class="pd-area-panel__video" src="assets/img/2-hugro/treatment-5.png" alt="팔" />
+            </div>
+            <p class="pd-area-panel__caption">팔 부위에 맞춘 지방분해 시술입니다.</p>
+          </div>
+
+          <!-- 복부 -->
+          <div class="pd-area-panel" data-area="3" id="area-panel-3" role="tabpanel">
+            <div class="pd-area-panel__video-wrap">
+              <img class="pd-area-panel__video" src="assets/img/2-hugro/treatment-5.png" alt="복부" />
+            </div>
+            <p class="pd-area-panel__caption">복부 부위에 맞춘 지방분해 시술입니다.</p>
+          </div>
+
+          <!-- 허벅지 -->
+          <div class="pd-area-panel" data-area="4" id="area-panel-4" role="tabpanel">
+            <div class="pd-area-panel__video-wrap">
+              <img class="pd-area-panel__video" src="assets/img/2-hugro/treatment-5.png" alt="허벅지" />
+            </div>
+            <p class="pd-area-panel__caption">허벅지 부위에 맞춘 지방분해 시술입니다.</p>
           </div>
         </div>
       </section>
+
+      <!-- ══════════════════════════════════════════════════════
+     05. TREATMENT PROCESS
+══════════════════════════════════════════════════════ -->
+      <section class="section pd-process" aria-label="시술 과정" data-reveal>
+        <div class="wrap">
+          <div class="pd-sec-head">
+            <p class="eyebrow">Process</p>
+            <h2 class="pd-sec-title">시술 과정</h2>
+          </div>
+
+          <div class="acc" role="list">
+            <!-- Step 01 -->
+            <div class="acc-item is-open" role="listitem">
+              <button class="acc-head pd-process__head" aria-expanded="true">
+                <span class="pd-step-num">01</span>
+                <span class="pd-step-name">상담 및 부위 분석</span>
+                <span class="acc-icon"></span>
+              </button>
+              <div class="acc-body">
+                <div class="pd-process__content">
+                  지방 분포와 체형을 분석하여 시술 부위와 용량을 설계합니다.
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 02 -->
+            <div class="acc-item" role="listitem">
+              <button class="acc-head pd-process__head" aria-expanded="false">
+                <span class="pd-step-num">02</span>
+                <span class="pd-step-name">시술 부위 세정 및 마취</span>
+                <span class="acc-icon"></span>
+              </button>
+              <div class="acc-body">
+                <div class="pd-process__content">
+                  통증 완화를 위한 마취 크림 또는 국소 마취를 진행합니다.
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 03 -->
+            <div class="acc-item" role="listitem">
+              <button class="acc-head pd-process__head" aria-expanded="false">
+                <span class="pd-step-num">03</span>
+                <span class="pd-step-name">지방분해 약물 또는 에너지 시술</span>
+                <span class="acc-icon"></span>
+              </button>
+              <div class="acc-body">
+                <div class="pd-process__content">
+                  설계된 부위에 정밀하게 약물을 주입하거나 에너지를 조사합니다.
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 04 -->
+            <div class="acc-item" role="listitem">
+              <button class="acc-head pd-process__head" aria-expanded="false">
+                <span class="pd-step-num">04</span>
+                <span class="pd-step-name">마사지 및 붓기 관리</span>
+                <span class="acc-icon"></span>
+              </button>
+              <div class="acc-body">
+                <div class="pd-process__content">
+                  시술 직후 부드러운 마사지로 붓기를 관리합니다.
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 05 -->
+            <div class="acc-item" role="listitem">
+              <button class="acc-head pd-process__head" aria-expanded="false">
+                <span class="pd-step-num">05</span>
+                <span class="pd-step-name">결과 확인 및 사후 관리 안내</span>
+                <span class="acc-icon"></span>
+              </button>
+              <div class="acc-body">
+                <div class="pd-process__content">
+                  회복 기간 중 관리 방법과 재시술 주기를 안내합니다.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════════════════
+     06. BENEFITS + PRECAUTIONS
+══════════════════════════════════════════════════════ -->
+      <section class="section pd-bp" aria-label="효과 및 주의사항" data-reveal>
+        <div class="wrap">
+          <div class="pd-bp__grid">
+            <div class="pd-bp__col pd-bp__col--benefit">
+              <div class="pd-bp__col-head">
+                <span class="pd-bp__icon-wrap" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                </span>
+                <h3 class="pd-bp__col-title">효과 및 장점</h3>
+              </div>
+              <ul class="pd-bp__list">
+                <li>식이조절 없이 부분적인 라인 개선 가능</li>
+                <li>반영구적으로 유지되는 지방세포 감소 효과</li>
+                <li>수술적 지방흡입 대비 부담이 적음</li>
+                <li>턱밑부터 복부까지 다양한 부위 적용 가능</li>
+                <li>코스 진행 시 점진적이고 자연스러운 변화</li>
+              </ul>
+            </div>
+
+            <div class="pd-bp__col pd-bp__col--caution">
+              <div class="pd-bp__col-head">
+                <span class="pd-bp__icon-wrap" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18">
+                    <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z" />
+                    <line x1="12" y1="9" x2="12" y2="13" />
+                    <line x1="12" y1="17" x2="12.01" y2="17" />
+                  </svg>
+                </span>
+                <h3 class="pd-bp__col-title">시술 전후 주의사항</h3>
+              </div>
+              <ul class="pd-bp__list">
+                <li>시술 후 며칠간 붓기와 멍이 나타날 수 있음</li>
+                <li>시술 부위 압박 마사지로 붓기 관리 권장</li>
+                <li>시술 당일 음주 및 격렬한 운동 자제</li>
+                <li>임신·수유 중이거나 간·신장 질환이 있는 경우 시술 불가</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════════════════
+     07. RELATED PROCEDURES
+══════════════════════════════════════════════════════ -->
+      <section class="section pd-related" aria-label="다른 시술 살펴보기" data-reveal>
+        <div class="wrap">
+          <div class="pd-sec-head">
+            <p class="eyebrow">More Procedures</p>
+            <h2 class="pd-sec-title">다른 시술 살펴보기</h2>
+          </div>
+
+          <div class="pd-related__grid">
+            <a href="procedure-detail-filler.html" class="pd-rel-card">
+              <div class="pd-rel-card__img-wrap">
+                <img class="pd-rel-card__img" src="assets/img/4-treatment/filler.png" alt="필러 시술" />
+              </div>
+              <div class="pd-rel-card__footer">
+                <span class="pd-rel-card__name">필러</span>
+                <svg class="pd-rel-card__arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14">
+                  <line x1="5" y1="12" x2="19" y2="12" />
+                  <polyline points="12 5 19 12 12 19" />
+                </svg>
+              </div>
+            </a>
+
+            <a href="procedure-detail-botox.html" class="pd-rel-card">
+              <div class="pd-rel-card__img-wrap">
+                <img class="pd-rel-card__img" src="assets/img/1-page-home/01_main_banner/hero-13.png" alt="보톡스 시술" />
+              </div>
+              <div class="pd-rel-card__footer">
+                <span class="pd-rel-card__name">보톡스</span>
+                <svg class="pd-rel-card__arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14">
+                  <line x1="5" y1="12" x2="19" y2="12" />
+                  <polyline points="12 5 19 12 12 19" />
+                </svg>
+              </div>
+            </a>
+
+            <a href="procedure-detail-threadlifting.html" class="pd-rel-card">
+              <div class="pd-rel-card__img-wrap">
+                <img class="pd-rel-card__img" src="assets/img/1-page-home/01_main_banner/hero-14.png" alt="실리프팅 시술" />
+              </div>
+              <div class="pd-rel-card__footer">
+                <span class="pd-rel-card__name">실리프팅</span>
+                <svg class="pd-rel-card__arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14">
+                  <line x1="5" y1="12" x2="19" y2="12" />
+                  <polyline points="12 5 19 12 12 19" />
+                </svg>
+              </div>
+            </a>
+
+            <a href="procedure-detail-laser.html" class="pd-rel-card">
+              <div class="pd-rel-card__img-wrap">
+                <img class="pd-rel-card__img" src="assets/img/1-page-home/01_main_banner/hero-15.png" alt="레이저 시술" />
+              </div>
+              <div class="pd-rel-card__footer">
+                <span class="pd-rel-card__name">레이저</span>
+                <svg class="pd-rel-card__arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14">
+                  <line x1="5" y1="12" x2="19" y2="12" />
+                  <polyline points="12 5 19 12 12 19" />
+                </svg>
+              </div>
+            </a>
+
+            <a href="procedure-detail-skinbooster.html" class="pd-rel-card">
+              <div class="pd-rel-card__img-wrap">
+                <img class="pd-rel-card__img" src="assets/img/1-page-home/01_main_banner/hero-17.png" alt="스킨부스터 시술" />
+              </div>
+              <div class="pd-rel-card__footer">
+                <span class="pd-rel-card__name">스킨부스터</span>
+                <svg class="pd-rel-card__arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14">
+                  <line x1="5" y1="12" x2="19" y2="12" />
+                  <polyline points="12 5 19 12 12 19" />
+                </svg>
+              </div>
+            </a>
+
+            <a href="procedure-detail-skincare.html" class="pd-rel-card">
+              <div class="pd-rel-card__img-wrap">
+                <img class="pd-rel-card__img" src="assets/img/1-page-home/01_main_banner/hero-2.png" alt="피부관리 시술" />
+              </div>
+              <div class="pd-rel-card__footer">
+                <span class="pd-rel-card__name">피부관리</span>
+                <svg class="pd-rel-card__arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14">
+                  <line x1="5" y1="12" x2="19" y2="12" />
+                  <polyline points="12 5 19 12 12 19" />
+                </svg>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════════════════
+     08. CTA BANNER
+══════════════════════════════════════════════════════ -->
+      <div class="cta-banner" id="consultation" data-reveal>
+        <div>
+          <p class="cta-banner__label">시술 상담 예약</p>
+          <p class="cta-banner__title">나에게 맞는 시술을 전문가와 함께 찾아보세요</p>
+        </div>
+        <a href="reservation.html" class="cta-banner__btn">
+          상담 예약하기
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14">
+            <line x1="5" y1="12" x2="19" y2="12" />
+            <polyline points="12 5 19 12 12 19" />
+          </svg>
+        </a>
+      </div>
     </main>
 
     <!-- ============================== 문의 (CONTACT) ============================== -->
@@ -560,7 +860,12 @@
       </div>
     </footer>
 
-    <!-- ════ Language Bottom Sheet ════ -->
+    <!-- Mobile Bottom Bar -->
+
+    <!-- Mobile CTA -->
+    <a href="reservation.html" class="pd-mobile-cta">상담 예약하기</a>
+
+    <!-- Language Bottom Sheet -->
     <div class="lang-sheet" id="langSheet" aria-hidden="true">
       <div class="lang-sheet__backdrop"></div>
       <div class="lang-sheet__inner">
@@ -575,7 +880,7 @@
       </div>
     </div>
 
-    <!-- ════ Login Modal ════ -->
+    <!-- Login Modal -->
     <div class="login-modal" id="loginModal" aria-hidden="true">
       <div class="login-modal__backdrop" id="loginBackdrop"></div>
       <div class="login-modal__box" role="dialog" aria-modal="true" aria-label="로그인">
@@ -592,24 +897,22 @@
           <div class="login-modal__label-group">
             <label class="login-field-label" for="loginEmail">이메일</label>
             <div class="login-modal__field">
-              <span class="login-field-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" width="17" height="17">
+              <span class="login-field-icon"
+                ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" width="17" height="17">
                   <rect x="2" y="4" width="20" height="16" rx="2" />
-                  <polyline points="2,4 12,13 22,4" />
-                </svg>
-              </span>
+                  <polyline points="2,4 12,13 22,4" /></svg
+              ></span>
               <input id="loginEmail" type="email" class="login-modal__input" placeholder="email@example.com" autocomplete="email" />
             </div>
           </div>
           <div class="login-modal__label-group">
             <label class="login-field-label" for="loginPassword">비밀번호</label>
             <div class="login-modal__field">
-              <span class="login-field-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" width="17" height="17">
+              <span class="login-field-icon"
+                ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" width="17" height="17">
                   <rect x="3" y="11" width="18" height="11" rx="2" />
-                  <path d="M7 11V7a5 5 0 0 1 10 0v4" />
-                </svg>
-              </span>
+                  <path d="M7 11V7a5 5 0 0 1 10 0v4" /></svg
+              ></span>
               <input type="password" id="loginPassword" class="login-modal__input" placeholder="••••••••" autocomplete="current-password" />
               <button type="button" class="login-pwd-eye" id="loginPwdToggle" aria-label="비밀번호 보기">
                 <svg id="eyeIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" width="17" height="17">
@@ -620,10 +923,7 @@
             </div>
           </div>
           <div class="login-modal__options">
-            <label class="login-remember">
-              <input type="checkbox" />
-              로그인 상태 유지
-            </label>
+            <label class="login-remember"><input type="checkbox" />로그인 상태 유지</label>
             <a href="#" class="login-modal__forgot">비밀번호를 잊으셨나요?</a>
           </div>
           <button type="submit" class="login-modal__submit">로그인</button>
@@ -631,7 +931,7 @@
         <div class="login-modal__divider"><span>또는</span></div>
         <div class="login-modal__social">
           <button class="login-social-btn login-social-btn--google">
-            <svg viewBox="0 0 24 24" width="20" height="20" xmlns="http://www.w3.org/2000/svg">
+            <svg viewBox="0 0 24 24" width="20" height="20">
               <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4" />
               <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853" />
               <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05" />
@@ -662,7 +962,8 @@
     <script src="js/image-slot.js"></script>
     <script src="js/app.js"></script>
     <script src="js/contact-popup.js"></script>
-    <script src="js/cosmetic.js"></script>
+    <script src="js/procedure-detail.js"></script>
+
     <script src="js/mobile-bar.js"></script>
     <script src="js/lang-nav.js"></script>
   </body>

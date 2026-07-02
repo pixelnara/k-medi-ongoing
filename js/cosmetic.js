@@ -11,7 +11,7 @@
       rating: 4.8,
       popularity: 95,
       tags: ["항산화", "깊은주름"],
-      img: "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=600&q=70",
+      img: "assets/img/7-cosmetic/3-b8570c74-0a94-4bbe-8b64-7f72f257fb8a.jpg",
     },
     {
       id: 2,
@@ -21,7 +21,7 @@
       rating: 4.7,
       popularity: 88,
       tags: ["건성케어", "피부결케어"],
-      img: "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&fit=crop&w=600&q=70",
+      img: "assets/img/7-cosmetic/2-839e3bbb-7096-467b-939b-f962bbcce710.jpg",
     },
     {
       id: 3,
@@ -31,7 +31,7 @@
       rating: 4.6,
       popularity: 72,
       tags: ["두피진정", "두피영양"],
-      img: "https://images.unsplash.com/photo-1522338242992-e1a54906a8da?auto=format&fit=crop&w=600&q=70",
+      img: "assets/img/7-cosmetic/1-7a8c5d17-c730-4e6e-abba-a3f1cdc5ff4c.jpg",
     },
     {
       id: 4,
@@ -41,7 +41,7 @@
       rating: 4.9,
       popularity: 91,
       tags: [],
-      img: "https://images.unsplash.com/photo-1619994403073-2cec844b8e63?auto=format&fit=crop&w=600&q=70",
+      img: "assets/img/7-cosmetic/4-74d977e6-dfb5-4a73-a03b-85a16a324c5a.png",
     },
     {
       id: 5,
@@ -51,7 +51,7 @@
       rating: 4.5,
       popularity: 65,
       tags: [],
-      img: "https://images.unsplash.com/photo-1599305445671-ac291c95aaa9?auto=format&fit=crop&w=600&q=70",
+      img: "assets/img/7-cosmetic/5-d05ccb6a-0bb2-4653-b974-8d88d536cd88.jpg",
     },
     {
       id: 6,
@@ -60,8 +60,8 @@
       price: 220000,
       rating: 4.7,
       popularity: 78,
-      tags: ["각질케어", "흔적사제"],
-      img: "https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?auto=format&fit=crop&w=600&q=70",
+      tags: ["각질케어", "흔적삭제"],
+      img: "assets/img/7-cosmetic/6-acc3bbee-e843-4008-9f5a-6f29acc93d1c.jpg",
     },
     {
       id: 7,
@@ -70,8 +70,8 @@
       price: 220000,
       rating: 4.4,
       popularity: 55,
-      tags: ["수분공급"],
-      img: "https://images.unsplash.com/photo-1617897903246-719242758050?auto=format&fit=crop&w=600&q=70",
+      tags: [],
+      img: "assets/img/7-cosmetic/7-2b792923-d975-41e6-83b2-232aff738cbb.png",
     },
     {
       id: 8,
@@ -80,8 +80,8 @@
       price: 220000,
       rating: 4.3,
       popularity: 48,
-      tags: ["단독션", "주름관리"],
-      img: "https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=600&q=70",
+      tags: ["탄력개선", "주름완화"],
+      img: "assets/img/7-cosmetic/8-5048bf5f-aa9a-49ca-8f53-69dccfa25ee9.png",
     },
     {
       id: 9,
@@ -129,7 +129,10 @@
 
   var currentCategory = "all";
   var currentSort = "default";
-  var TAG_COLORS = ["cosm-tag--0", "cosm-tag--1", "cosm-tag--2", "cosm-tag--3", "cosm-tag--4", "cosm-tag--5"];
+  var currentSearch = "";
+  var currentPage = 1;
+  var PAGE_SIZE = 8;
+  var totalPages = 1;
 
   function formatPrice(n) {
     return "₩" + n.toLocaleString("ko-KR");
@@ -153,7 +156,6 @@
       '    <h3 class="prod-card__name">' + p.name + "</h3>",
       '    <div class="prod-card__meta">',
       '      <span class="prod-card__price">' + formatPrice(p.price) + "</span>",
-      '      <span class="prod-card__rating">★ ' + p.rating.toFixed(1) + "</span>",
       "    </div>",
       "  </div>",
       "</article>",
@@ -167,6 +169,12 @@
         : products.filter(function (p) {
             return p.category === currentCategory;
           });
+
+    if (currentSearch) {
+      filtered = filtered.filter(function (p) {
+        return p.name.toLowerCase().indexOf(currentSearch) !== -1;
+      });
+    }
 
     switch (currentSort) {
       case "name":
@@ -197,7 +205,14 @@
     }
 
     document.getElementById("productCount").textContent = filtered.length;
-    document.getElementById("productGrid").innerHTML = filtered.map(renderCard).join("");
+
+    totalPages = Math.max(1, Math.ceil(filtered.length / PAGE_SIZE));
+    if (currentPage > totalPages) currentPage = totalPages;
+    var start = (currentPage - 1) * PAGE_SIZE;
+    var pageItems = filtered.slice(start, start + PAGE_SIZE);
+
+    document.getElementById("productGrid").innerHTML = pageItems.map(renderCard).join("");
+    renderPagination();
 
     document.querySelectorAll(".prod-card[data-id]").forEach(function (card) {
       card.addEventListener("click", function () {
@@ -263,6 +278,57 @@
     });
   }
 
+  /* ── 페이지네이션 ── */
+  function renderPagination() {
+    var numsEl = document.getElementById("cosmPagiNums");
+    var html = "";
+    for (var i = 1; i <= totalPages; i++) {
+      html += '<button class="cosm-pagi-num' + (i === currentPage ? " is-active" : "") + '" data-page="' + i + '">' + i + "</button>";
+    }
+    numsEl.innerHTML = html;
+    numsEl.querySelectorAll(".cosm-pagi-num").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        currentPage = parseInt(btn.dataset.page, 10);
+        render();
+        document.getElementById("products").scrollIntoView({ behavior: "smooth", block: "start" });
+      });
+    });
+    document.getElementById("cosmPrevBtn").disabled = currentPage <= 1;
+    document.getElementById("cosmNextBtn").disabled = currentPage >= totalPages;
+  }
+
+  document.getElementById("cosmPrevBtn").addEventListener("click", function () {
+    if (currentPage > 1) {
+      currentPage--;
+      render();
+      document.getElementById("products").scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  });
+  document.getElementById("cosmNextBtn").addEventListener("click", function () {
+    if (currentPage < totalPages) {
+      currentPage++;
+      render();
+      document.getElementById("products").scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  });
+
+  /* ── 검색 ── */
+  var searchBtn = document.getElementById("cosmSearchBtn");
+  var searchWrap = document.getElementById("cosmSearchWrap");
+  var searchInput = document.getElementById("cosmSearchInput");
+  if (searchBtn && searchWrap && searchInput) {
+    searchBtn.addEventListener("click", function (e) {
+      e.stopPropagation();
+      searchWrap.classList.toggle("is-open");
+      if (searchWrap.classList.contains("is-open")) searchInput.focus();
+    });
+    searchInput.addEventListener("input", function () {
+      currentSearch = searchInput.value.trim().toLowerCase();
+      currentPage = 1;
+      render();
+    });
+  }
+
   /* ── 선택박스 공통 로직 ── */
   function initSelect(btnId, dropdownId, labelId, onChange) {
     var btn = document.getElementById(btnId);
@@ -310,6 +376,7 @@
 
   initSelect("catBtn", "catDropdown", "catLabel", function (val) {
     currentCategory = val;
+    currentPage = 1;
     render();
   });
 
