@@ -14,7 +14,7 @@
   /** 현재 파일명 반환 */
   function getCurrentFilename() {
     const raw = location.pathname.split("/").pop();
-    return (raw && raw.endsWith(".html")) ? raw : "index.html";
+    return raw && raw.endsWith(".html") ? raw : "index.html";
   }
 
   /** 언어 코드에 맞는 URL 반환 */

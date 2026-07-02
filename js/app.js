@@ -113,9 +113,9 @@
         return;
       }
       if (e.key !== "Tab") return;
-      var focusable = Array.from(
-        overlay.querySelectorAll('a[href], button:not([disabled]), input:not([disabled]), [tabindex]:not([tabindex="-1"])'),
-      ).filter((el) => !el.closest('[aria-hidden="true"]'));
+      var focusable = Array.from(overlay.querySelectorAll('a[href], button:not([disabled]), input:not([disabled]), [tabindex]:not([tabindex="-1"])')).filter(
+        (el) => !el.closest('[aria-hidden="true"]'),
+      );
       if (!focusable.length) return;
       var first = focusable[0],
         last = focusable[focusable.length - 1];
